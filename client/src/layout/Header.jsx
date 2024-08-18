@@ -9,7 +9,7 @@ export default function Header() {
     const [fixed, setFixed] = useState(false);
     const [dropdown, setDropdown] = useState(false);
 
-    // Handle scroll to toggle fixed class
+    
     const handleScroll = () => {
         if (window.scrollY > 36) {
             setFixed(true);
@@ -50,7 +50,7 @@ export default function Header() {
                     </div>
                 </section>
                 <Divider />
-                <section className={` ${fixed ? 'top-0 fixed ' : ''} transition-all duration-200  shadow-md w-full items-center lg:px-10 py-2 px-5 lg:flex hidden justify-between`}>
+                <section className={` transition-all duration-200  shadow-md w-full items-center lg:px-10 py-2 px-5 lg:flex hidden justify-between`}>
                     <div className="logo flex gap-1 items-center">
                         <img className='h-[90px] w-[90px]' src={logo} alt="Logo" />
                     </div>
