@@ -1,93 +1,100 @@
-import React, { useEffect, useState } from 'react';
-import { styled } from 'styled-components';
-import { Divider } from '@mui/material';
-import logo from '../images/logo.svg';
-import { motion } from 'framer-motion';
-import { ArrowDropDown, ArrowDropUp, MailRounded } from '@mui/icons-material';
+import React, { useState } from 'react'
+import img1 from '../assets/nav.png'
+import logo from '../assets/logo.png'
+import { styled } from 'styled-components'
+import { ArrowDownward, ArrowDropDown, ArrowDropUp } from '@mui/icons-material'
+import { Hamburger } from '../icons/Button';
+import './Header.css';
+const Link = styled.a`
+    font-family: raleway, Sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#666;
+    cursor:pointer;
+    
+`;
+
+
 
 export default function Header() {
-    const [fixed, setFixed] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
 
-    
-    const handleScroll = () => {
-        if (window.scrollY > 36) {
-            setFixed(true);
-        } else {
-            setFixed(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    // Styled Link Component
-    const StyledLink = styled.a`
-        font-family: Hind, sans-serif;
-        color: #0f0f0f;
-        font-weight: 500;
-        cursor: pointer;
-        &:hover {
-            color: #152b8a;
-        }
-    `;
+    const [showNav, setShowNav] = useState(false);
+    const [showDropDown, setShowDropDown] = useState(false);
 
     return (
-        <>
-            <nav>
-                <section className={` bg-[#faf8fa] lg:px-10 py-2 lg:flex justify-between hidden gap-3`}>
-                    <div className='flex items-center'>
-                        <MailRounded style={{ fontSize: "20px" }} />
-                        <p className='ml-3 text-[13px] font-sans'>Contact Us: Tel: +91 9897631812 | Email: guniyaleducent@gmail.com</p>
+        <div className='relative z-[90] h-[100px] lg:h-[135.03px]'>
+            <div className='fixed lg:flex hidden px-20 shadow-xl  py-5 gap-10 w-full bg-white'>
+                <div onClick={() => window.location.href = "/"} className="logo">
+                    <img src={logo} height={"100px"} width={"100px"} alt="" />
+                </div>
+                <div className="flex items-end list-none   gap-7 pb-7">
+                    <li><Link href='/'>Home</Link></li>
+                    <li><Link href='/about/toons-trust'>About Us</Link></li>
+                    <div className='flex flex-col items-center relative h-auto' onMouseEnter={() => setShowDropDown(true)} onMouseLeave={() => setShowDropDown(false)}>
+                        <Link className='flex items-center'>Newsletters {
+                            showDropDown ?
+                                <>
+                                    <ArrowDropUp className='' />
+                                </>
+                                :
+                                <>
+                                    <ArrowDropDown className='' />
+                                </>
+                        } </Link>
+                        <div className={`${showDropDown ? 'absolute' : 'hidden'}  pt-[76px] w-36 top-0 list-none flex flex-col gap-2`}>
+                            <div className={`bg-white px-5 py-3 w-36 top-[75px]  list-none flex flex-col gap-2`}>
+                                <li className='hover:text-gray-600 cursor-pointer '>Latest year</li>
+                                <li className='hover:text-gray-600 cursor-pointer '>Previous year</li>
+                                <li className='hover:text-gray-600 cursor-pointer '>1st year</li>
+                            </div>
+                        </div>
                     </div>
-                    <div className='flex gap-3'>
-                        <p className='ml-3 text-[13px] font-sans'>*Pan Card is mandatory for All Donations</p>
-                        <a href="@" className="text-sm text-indigo-700">Visit Us</a>
-                    </div>
-                </section>
-                <Divider />
-                <section className={` transition-all duration-200  shadow-md w-full items-center lg:px-10 py-2 px-5 lg:flex hidden justify-between`}>
-                    <div className="logo flex gap-1 items-center">
-                        <img className='h-[90px] w-[90px]' src={logo} alt="Logo" />
-                    </div>
-                    <ul className='flex-1 pl-10 flex gap-4'>
-                        <li><StyledLink>Home</StyledLink></li>
-                        <li><StyledLink>About Us</StyledLink></li>
-                        <li><StyledLink>Gallery</StyledLink></li>
-                        <li><StyledLink>Impact</StyledLink></li>
-                        <li><StyledLink>Donations</StyledLink></li>
-                        <li className='relative' onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
-                            <StyledLink>Newsletters</StyledLink>
-                            {dropdown ? <ArrowDropUp color='inherit' /> : <ArrowDropDown color='inherit' />}
-                            {dropdown && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 2 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    className='absolute left-0 w-[110px]'
-                                >
-                                    <ul className='flex flex-col gap-1 mt-12 px-1 bg-white'>
-                                        <li className='text-[#242222] cursor-pointer transition-all ease-in-out duration-200 hover:text-[#1528ea]'>Last Year</li>
-                                        <Divider />
-                                        <li className='text-[#010101] cursor-pointer transition-all ease-in-out duration-200 hover:text-[#1528ea]'>First Year</li>
-                                        <Divider />
-                                        <li className='text-[#010101] cursor-pointer transition-all ease-in-out duration-200 hover:text-[#1528ea]'>Latest Year</li>
-                                    </ul>
-                                </motion.div>
-                            )}
+                    <li><Link>Gallery</Link></li>
+                    <li><Link>Stories</Link></li>
+                    <li><Link href="/donations/make-a-change">Donations</Link></li>
+                </div>
+                <div className="absolute right-20 flex items-end gap-10">
+                    <button  className="bg-gradient-to-r h-8 donate-btn  mb-4   from-[#7c8fe6] to-[#152b8a] text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-101">
+                        Donate Now
+                    </button>
+                    <img className='ute' src={img1} height={"40px"} width={"50px"} alt="" />
+                </div>
+            </div>
+            <div  className='shadow-md lg:hidden z-[90] fixed  w-full top-0 bg-white flex justify-between px-4 items-center  py-3'>
+                <div className="logo">
+              <img src={logo} height={"80px"} width={"80px"} alt="" />
+                </div>
+                <div className="btns">
+                    <Hamburger showNav={showNav} setShowNav={setShowNav}  ></Hamburger>
+                </div>
+                <div className={`absolute  top-24 overflow-hidden bg-white w-full left-0 ${showNav ? 'showMenu' : 'hideMenu'}`}>
+                    <div className={`flex flex-col items-center list-none  gap-7 py-9`}>
+                        <li><Link href='/'>Home</Link></li>
+                        <li><Link href="/about/toons-trust" className='text-black'>About Us</Link></li>
+                        <li><Link onClick={() => setShowDropDown(!showDropDown)} className='text-black relative mr-2'>Newsletters {
+                            showDropDown ?
+                                <>
+                                    <ArrowDropUp className='absolute' />
+                                </> :
+                                <>
+                                    <ArrowDropDown className='absolute' />
+                                </>
+                        } </Link>
+                            <ul className={`${showDropDown ? 'h-auto' : 'hidden'} overflow-hidden list-none flex flex-col items-center pt-2 gap-2`}>
+                                <li><Link>Latest Year</Link></li>
+                                <li><Link>Previous Year</Link></li>
+                                <li><Link>First Year</Link></li>
+                            </ul>
                         </li>
-                    </ul>
-                    <div className="flex">
-                        <button className="bg-gradient-to-r h-8 donate-btn mb-4 flex items-center from-[#7c8fe6] to-[#152b8a] text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-101">
-                            Donate Now
-                        </button>
+
+                        <li><Link className='text-black'>Gallery</Link></li>
+                        <li><Link className='text-black'>Stories</Link></li>
+                        <li><Link href='/donations/make-a-change' className='text-black'>Donations</Link></li>
                     </div>
-                </section>
-            </nav>
-        </>
-    );
+                </div>
+
+            </div>
+        </div>
+    )
 }

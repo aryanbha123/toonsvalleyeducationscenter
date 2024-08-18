@@ -7,7 +7,7 @@ import mahima from './mahima.jpg'
 import asha from './asha.jpg'
 import komal from './komal.jpg'
 
-const items = [
+export const students = [
     {
         name: "Vandana",
         src: vandana,

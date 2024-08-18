@@ -9,17 +9,20 @@ export default function App() {
 
   const Home = lazy(() => import('./pages/Home'));
   const About = lazy(() => import('./pages/About'));
+  const Donations = lazy(() => import('./pages/Donations'));
+  const NotFound = lazy(() => import('./pages/NotFound'));
   return (
     <AuthProvider>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About/>} />
+          <Route path='/about/toons-trust' element={<About/>} />
           <Route element={<ProtectRoute/>} >
               <Route path='/admin' element={<>Admin</>} />
               <Route path='/admin/contact-form' element={<>Admin</>} />
           </Route>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
