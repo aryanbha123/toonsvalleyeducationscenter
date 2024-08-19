@@ -1,0 +1,11 @@
+footer {
+    h2 {
+        color: #f1f1f1 !important;
+    }
+    p{
+        text-align: start !important;
+        /* color: #f3f3f3 !important;
+        font-size: 16px;
+        font-weight: 100 !important; */
+    }
+}

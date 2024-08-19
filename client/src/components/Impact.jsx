@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { TextBox } from '../utils/TextBox';
 import { Typography } from '@mui/material';
-import {students} from '../data/students'
+import { students } from '../data/students'
+import Title from '../utils/Title';
 export default function Impact() {
     const [activeIndex, setActiveIndex] = useState(0);
 
-
-
-
     useEffect(() => {
         var len = 0
-        if(window.innerWidth < 990){
+        if (window.innerWidth < 990) {
             len = 8;
-        }else{
+        } else {
             len = 6;
         }
         const interval = setInterval(() => {
@@ -23,8 +21,11 @@ export default function Impact() {
     }, [students.length]);
 
     return (
-        <>
-            <div className='relative mt-20 overflow-x-hidden lg:right-[80px] lg:left-[80px] lg:w-[calc(100vw-160px)] lg:h-[240px] md:h-[340px] w-[calc(100vw-40px)] h-[350px] gap-4 grid lg:grid-cols-3 grid-cols-1 left-5 right-5'>
+        <div className=' pt-10'>
+            <div className="lg:px-20 px-5">
+                <Title head={"Our Impact"} subhead={"Empowering the next generation through education and support."} />
+            </div>
+            <div className='relative mt-5 overflow-x-hidden lg:right-[80px] lg:left-[80px] lg:w-[calc(100vw-160px)] lg:h-[240px] md:h-[340px] w-[calc(100vw-40px)] h-[350px] gap-4 flex items-center left-5 right-5'>
                 {
                     students.map((item, index) => (
                         <div
@@ -55,22 +56,21 @@ export default function Impact() {
                     ))
                 }
             </div>
-            <div className='cursor-pointer relative overflow-x-hidden right-[80px] left-[80px] w-[calc(100vw-160px)] h-[100px] flex gap-3 justify-center'>
+            <div className='cursor-pointer relative overflow-x-hidden right-[80px] left-[80px] w-[calc(100vw-160px)] h-[100px] items-center flex gap-3 justify-center'>
                 {
                     students.map((_, index) => (
                         <div
-                        id={`i${index}`}
+                            id={`i${index}`}
                             key={index}
                             onClick={() => setActiveIndex(index)}
-                            className={`w-[10px] h-[10px] rounded-[50%] ${
-                                index === activeIndex
-                                    ? 'bg-[#152b8a] from-red-500 to-pink-500'
-                                    : 'bg-gray-300'
-                            }`}
+                            className={`w-[10px] h-[10px] rounded-[50%] ${index === activeIndex
+                                ? 'bg-[#152b8a] from-red-500 to-pink-500'
+                                : 'bg-gray-300'
+                                }`}
                         />
                     ))
                 }
             </div>
-        </>
+        </div>
     );
 }

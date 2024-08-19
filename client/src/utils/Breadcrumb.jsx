@@ -3,7 +3,7 @@ import React from 'react'
 export default function Breadcrumb({ items }) {
     return (
         <div
-            className="flex  items-center lg:block md:block  pt-10 lg:mx-20 mx-5  "
+            className="flex  items-center lg:block md:block pt-10 lg:mx-20 mx-5  "
             style={{
                 backgroundPosition: 'contain',
                 backgroundAttachment: 'fixed',
