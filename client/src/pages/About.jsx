@@ -13,6 +13,7 @@ import i3 from '../assets/3.png';
 import i4 from '../assets/4.png';
 import i5 from '../assets/5.png';
 import Hero from '../components/Hero';
+import Zarine from '../assets/zarine.jpg'
 import Team from '../components/Team';
 export default function About() {
 
@@ -87,6 +88,22 @@ export default function About() {
       </div>
       <div className='lg:px-20 px-5 mt-10' >
         <Team />
+      </div>
+      <div className='lg:px-20 px-5'>
+        <Title head={"Mrs Zarine Bath"} subhead={"Our Visionary Leader "} />
+
+        <TextBox className='text-start my-8'>
+
+          <div className="flex lg:flex-row flex-col gap-4">
+
+            <div className="">
+              <p className='text-start'>
+                Mrs. Zarina Bath is a remarkable woman whose journey began with a strong educational foundation at Good Shepherd's Convent in Bangalore. She made significant contributions to the Army Wives Welfare Association, including setting up vocational training centers and ensuring early pension disbursement for war widows. Her passion for the environment is evident in her efforts to protect trees, preserve rivers, and care for abandoned cows. As an entrepreneur, she runs a successful cottage industry and empowers village women. Mrs. Bath also created the BILLZAR platform, supporting grassroots women entrepreneurs. Her legacy continues as she proudly carries forward her late husband's vision, leaving an indelible mark on all who know her.
+              </p>
+            </div>
+            <img src={Zarine} className='lg:w-[250px] rounded w-full' alt="" />
+          </div>
+        </TextBox>
       </div>
 
 
