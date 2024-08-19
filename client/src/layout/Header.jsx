@@ -50,12 +50,12 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
-                    <li><Link>Gallery</Link></li>
-                    <li><Link>Stories</Link></li>
+                    <li><Link href="/gallery" >Gallery</Link></li>
+                    <li><Link href="/stories">Stories</Link></li>
                     <li><Link href="/donations/make-a-change">Donations</Link></li>
                 </div>
                 <div className="absolute right-20 flex items-end gap-10">
-                    <button  className="bg-gradient-to-r h-8 donate-btn  mb-4   from-[#7c8fe6] to-[#152b8a] text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-101">
+                    <button onClick={() => {window.location.href = "/donate-now"}}  className="bg-gradient-to-r h-8 donate-btn  mb-4   from-[#7c8fe6] to-[#152b8a] text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-101">
                         Donate Now
                     </button>
                     <img className='ute' src={img1} height={"40px"} width={"50px"} alt="" />
@@ -88,8 +88,8 @@ export default function Header() {
                             </ul>
                         </li>
 
-                        <li><Link className='text-black'>Gallery</Link></li>
-                        <li><Link className='text-black'>Stories</Link></li>
+                        <li><Link href="/gallery" className='text-black'>Gallery</Link></li>
+                        <li><Link href="/stories" className='text-black'>Stories</Link></li>
                         <li><Link href='/donations/make-a-change' className='text-black'>Donations</Link></li>
                     </div>
                 </div>

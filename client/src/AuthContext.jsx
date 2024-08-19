@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import Loader from './components/Loader';
+import zIndex from '@mui/material/styles/zIndex';
 
 const AuthContext = createContext();
 
@@ -62,7 +64,7 @@ export const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider value={value}>
-            {loading ? <div>Loading...</div> : children}
+            {loading ? <div style={{position:"fixed " , top:"0" ,left : "0" ,zIndex:"999"}}><Loader></Loader></div> : children}
         </AuthContext.Provider>
     );
 };
