@@ -18,6 +18,9 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about/toons-trust' element={<About/>} />
+          <Route path='/donations/make-a-change' element={<About/>} />
+          <Route path='/gallery' element={<About/>} />
+          <Route path='/stories' element={<About/>} />
           <Route element={<ProtectRoute/>} >
               <Route path='/admin' element={<>Admin</>} />
               <Route path='/admin/contact-form' element={<>Admin</>} />

@@ -71,7 +71,7 @@ export default function About() {
         <img className='h-[200px] w-[200px]' src={i4} alt="" />
         <img className='h-[200px] w-[200px]' src={i5} alt="" />
       </section>
-      {/* <section className='lg:hidden flex gap-3 items-center py-10 lg:px-20 px-5 md:flex-row flex-col justify-between' >
+      <section className='lg:hidden flex gap-3 items-center py-10 lg:px-20 px-5 md:flex-row flex-col justify-between' >
         <div className="flex justify-around">
           <img className='h-[] w-[40%]' src={i1} alt="" />
           <img className='h-[] w-[40%]' src={i2} alt="" />
@@ -81,7 +81,7 @@ export default function About() {
           <img className='h-[] w-[40%]' src={i4} alt="" />
           <img className='h-[] w-[40%]' src={i5} alt="" />
         </div>
-      </section> */}
+      </section>
       <div className='px-5 lg:px-20'>
         <Title head={"Our Teachers"} subhead={"Guiding the Future with Knowledge and Compassion"} />
       </div>
