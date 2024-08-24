@@ -15,6 +15,7 @@ import i5 from '../assets/5.png';
 import Hero from '../components/Hero';
 import Zarine from '../assets/zarine.jpg'
 import Team from '../components/Team';
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 export default function About() {
 
   const data = [{
@@ -36,26 +37,62 @@ export default function About() {
         <TextBox className='text-start'>
 
           <div className="flex lg:flex-row flex-col gap-4">
-            <img src={sunny} className='lg:w-[400px] w-full' alt="" />
+            <div className='w-[93vw]' >
+              <img src={sunny} className='lg:w-[400px] lg:h-[400px] w-full' alt="" />
+            </div>
             <div className="">
 
-              <p className='mb-4 text-start'>In the year 2006 when <b>Mr. Sunny Singh</b> started a little one room school in Guniyal Gaon. His sole aim was the Upliftment of the girl child. He established a trust and called it THE TONS VALLEY EDUCATION TRUST. The Trust in turn ran and funded the school that began imparting computer Education and teaching English to all the underprivileged children in the area.
+              <p className='mb-4 text-start' >
+                Surendra Nath Singh was an aluminist of the prestigiuous Doon School in dehradun and compelted his education from Delhi University
+                a few after he restired as an executive in the GENERAL ELECTIVE company based in Calcutta.
               </p>
               <p className='mb-4 text-start'>
-                Today as we stand on the threshold of yet another year, we look back at all the years gone by with pride and a sense of accomplishment. His vision and his dream has not lost momentum and we carry forth his legacy to the best of our ability.
+                Sunny was a “DOSCO” who had returned to his ‘roots’; having bought a small piece of land at a very scenic spot and built there a lovely cottage, then he started hunting for shrubs, plants, vines, and creepers for his garden, traveling as far as Thailand to add to his collection. The Cottage and the little garden could have been straight out of any English countryside Home and Garden magazine.
+
+              </p>
+              <p className='mb-4 text-start'>
+                Any other person would have sat back and savored the peace and tranquility of the scenic surroundings, read books, listened to music, watched TV, or like old faujis, pottered around the garden and muttered around the house. But the life of a Lotus Eater was not for Sunny Singh; he realized it was “PAY BACK TIME TO SOCIETY.”
+
               </p>
 
               <p className='text-start mb-4'>
-                We would like to pay an affectionate and grateful tribute to that wonderful, kindhearted Gentleman who devoted his life for these girls and their betterment
+
+                After much deliberation and consultations with friends, he decided to set up a school to educate the ‘Girl Child.’ Sunny went around to all the village homes selling his idea to the doubtful and reluctant villagers.
+
               </p>
-              <p className='text-start mb-4'>
-                The Tons Valley Education Trust, also krewn as Sunny's Amanat, was founded in 2006 by Mr. Sunny Singh. Its primary objective is the upliftment of the girl child by providing assistance in computer literacy and English language to underprivileged children in the area. Since his passing in 2012, his son, Mr. Aditya Singh, has been carrying forward this vision with enthusiastic sincerity
-              </p>
-              <p className='text-start mb-4'>
-                The Trust provides stationery, school bags, umbrellas in the monsoon; thermals, socks and woolens in winter. It has an enviable library of books and a full- fledged computer lab.
-              </p>
+
             </div>
           </div>
+
+          <div></div>
+          <Accordion>
+            <AccordionSummary id="panel-header" aria-controls="panel-content" ><span className='text-indigo-700'>
+            Read More ...</span></AccordionSummary>
+            <AccordionDetails>
+              <p className='text-start my-4'>
+                Next, Sunny requisitioned a room from the local Gram Sabha Pradhan and, with a few chairs and tables, he set about putting his ideas into practice. Six little girls joined the school. Undaunted, Sunny hired a teacher for them. By the end of the year, the numbers had swelled as the good reputation of this kind gentleman spread. So, with a few bumps and many a hiccup, the school slowly established itself, and everyone knew it as Sunny Sir’s school in Guniyal Gaon.
+              </p>
+              <p className='mb-4 text-start'>
+
+                A Trust was accordingly formed to run the school; it took over the task of providing scholarships for college girls and paid for their tuition fees, books, clothes, shoes, bags, and other miscellaneous expenses. Sunny then let friends and family know what he was doing, and soon the old Dosco friends and others from his Calcutta and Delhi days, well-wishers, and generous people from Doon began to send donations in cash and kind (gifts) in the form of blankets and tracksuits in winter, shoes and school bags in summer, and umbrellas in the Monsoon that were thankfully accepted. No gift was too small; everything was received with gratitude.
+              </p>
+              <p className='mb-4 text-start'>
+                Large quantities of old clothes, bags, and shoes began pouring in. Soon, one could see the village lass in Gucci shoes, carrying a Ferragamo bag, and wearing a Christina blouse with as much aplomb as her city counterpart. Friends also helped to sponsor girls through college. Sunny personally shopped for them when he went on his holidays overseas and brought back wristwatches, smart handbags, salwar suits, shoes, jeans, etc. The college girls looked so smart that they could have come from LSR in Delhi or Sophia in Bombay, and they did him proud by passing their examinations with good grades.
+              </p>
+              {/* <p className='mb-4 text-start'>
+                Computer training was the next thing on the cards. Mr. Alok Tandon of NIIT graciously gave assistance and guidance, and soon we had Deepika learning computer skills which she began to impart to the college girls.
+              </p> */}
+              <p className='mb-4 text-start'>
+                By December 2012, the school began to prominently figure in the local Hindi and English newspapers and attracted more supporters from amongst the Doonites. Sunny, then in his khadi kurta pajamas and Woodland shoes and his long flowing silver beard, was a familiar sight in the city, his car full of village girls being taken for special ‘treats’ to McDonald's, KFC, Pizza Hut, ice creams, and Elloras.
+              </p>
+              <p className='mb-4 text-start'>
+                Twice a year, the children were taken out on picnics, meticulously planned from what bus to charter and right through the food they were to partake in! Sunny accompanied them on every trip, taking them to Paonta Sahib, Rishikesh, Haridwar, Mussoorie, Chandigarh, etc. His friends and well-wishers sponsored all those trips, and Sunny gave the girls money from his own pocket for shopping on these excursions.
+
+                Pressure cookers were gifted to the mothers of the girls, while the mothers of the college-going girls were presented with food processors. It was then that Sunny decided that the families of these collegiate girls too should be financially assisted in getting them married. Despite reproachment and unsolicited advice from friends, he gave them small trousseaus and a trunk full of utilities for the house and kitchen. However, none of this sidetracked him from his original vision of educating and uplifting the girl child.
+
+              </p>
+            </AccordionDetails>
+          </Accordion>
         </TextBox>
       </div >
 
