@@ -42,7 +42,7 @@ export default function Footer() {
     <footer className='flex flex-col lg:px-20 py-10 bg-[#f5f5f5] text-[#010101] px-4'>
       <div className='flex justify-between  items-start flex-col lg:flex-row lg:gap-0 gap-6'>
         <TextBox className='w-[90vw]'>
-          <p className='text-start font-bold text-lg'>Toons Valley Education Trust</p>
+          <p className='text-start font-bold text-lg'>Tons Valley Education Trust</p>
           <p className='text-start'>Unit Guniyal Gaon Education Center</p>
           <p className='text-start'>A Charitable Institute for Girls</p>
           <br />
@@ -53,7 +53,7 @@ export default function Footer() {
         </TextBox>
         <TextBox className=' w-[80vw] lg:mb-0 mb-6'>
           <p className='text-start font-bold text-lg'>About Us</p>
-          <p className='text-start' >The "Tons Valley Education Trust Unit Guniyal Gaon Girls Education Center" (commonly referred to as Toons Valley Trust) is an educational trust focused on promoting the upliftment and empowerment of girl children through education.</p>
+          <p className='text-start' >The "Tons Valley Education Trust Unit Guniyal Gaon Girls Education Center" (commonly referred to as Tons Valley Trust) is an educational trust focused on promoting the upliftment and empowerment of girl children through education.</p>
           <p className='text-start text-indigo-500 cursor-pointer' href="">Read More <ArrowRight/> </p>
         </TextBox>
 
@@ -89,7 +89,7 @@ export default function Footer() {
       <Divider className='my-7 bg-[#666]' />
 
       <div className="flex justify-between items-center flex-col lg:flex-row">
-        <p className='text-[#010101] mb-2 lg:mb-0'>© 2024 Toons Valley Education Trust. All rights reserved.</p>
+        <p className='text-[#010101] mb-2 lg:mb-0'>© 2024 Tons Valley Education Trust. All rights reserved.</p>
         <div className='flex gap-3'>
           <IconButton aria-label="email" className="text-[#010101]">
             <MailOutline />

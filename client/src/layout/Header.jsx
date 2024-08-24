@@ -55,7 +55,7 @@ export default function Header() {
                     <li><Link href="/donations/make-a-change">Donations</Link></li>
                 </div>
                 <div className="absolute right-20 flex items-end gap-10">
-                    <button onClick={() => {window.location.href = "/donate-now"}}  className="bg-gradient-to-r h-8 donate-btn  mb-4   from-[#7c8fe6] to-[#152b8a] text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-101">
+                    <button onClick={() => {window.location.href = "/donations/make-a-change"}}  className="bg-gradient-to-r h-8 donate-btn  mb-4   from-[#7c8fe6] to-[#152b8a] text-white font-bold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-101">
                         Donate Now
                     </button>
                     <img className='ute' src={img1} height={"40px"} width={"50px"} alt="" />
