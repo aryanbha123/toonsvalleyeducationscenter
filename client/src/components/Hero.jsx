@@ -9,7 +9,7 @@ export default function Hero() {
                     <div className="absolute top-0 w-full h-full bg-center bg-cover" style={{
                         backgroundImage: `url(${backgroundImg})`
                     }}>
-                        <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
+                        <span id="blackOverlay" className="w-full h-full absolute opacity-60 bg-black"></span>
                     </div>
                     <div className="container relative mx-auto">
                         <div className="items-center flex flex-wrap">
