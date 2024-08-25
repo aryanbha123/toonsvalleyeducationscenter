@@ -22,7 +22,7 @@ import g18 from './gallery/18.jpg';
 import g19 from './gallery/19.jpg';
 import g20 from './gallery/20.jpg';
 import g21 from './gallery/21.jpg';
-import g22from './gallery/22.jpg';
+import g22 from './gallery/22.jpg';
 import g23 from './gallery/23.jpg';
 
 // import g10 from './gallery/10.jpg';
