@@ -6,6 +6,9 @@ import manisha from './manisha.jpg';
 import mahima from './mahima.jpg'
 import asha from './asha.jpg'
 import komal from './komal.jpg'
+import Megha from '..assets/IMG-20240824-WA0001.jpg'
+
+'
 
 export const students = [
     {
@@ -19,9 +22,9 @@ export const students = [
         about: " Mehak assists and is caregiver to an elderly person."
     },
     {
-        name: "Ruplai",
+        name: "Rupali",
         src: ruplai,
-        about: "Rupali is using her computer skills at the office of a political party in the city."
+        about: "Rupali after working at office of political party. She is now doing 2 year course in Hospitality and Training at FAIR FIELD MARRIOT which is a part of Project Shakti."
     },
     {
         name: "Muskan",
@@ -47,5 +50,15 @@ export const students = [
         name: "Komal",
         src: komal,
         about: "Komal is Front Office Associate at Antara Senior Living."
+    },
+    {
+        name: "Sonam",
+        src: sonam,
+        about: "Sonam is working at the front desk as receptionist of Hyatt Centric."
+    },
+    {
+        name: "Megha",
+        src: megha,
+        about: "Megha is Primary School Teacher in Shigali."
     },
 ];
