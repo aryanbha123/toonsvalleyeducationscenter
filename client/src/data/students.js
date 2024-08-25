@@ -6,7 +6,7 @@ import manisha from './manisha.jpg';
 import mahima from './mahima.jpg'
 import asha from './asha.jpg'
 import komal from './komal.jpg'
-import megha from './assets/IMG-20240824-WA0001.jpg'
+// import megha from './assets/IMG-20240824-WA0001.jpg'
 
 
 export const students = [
@@ -50,14 +50,14 @@ export const students = [
         src: komal,
         about: "Komal is Front Office Associate at Antara Senior Living."
     },
-    {
-        name: "Sonam",
-        src: sonam,
-        about: "Sonam is working at the front desk as receptionist of Hyatt Centric."
-    },
-    {
-        name: "Megha",
-        src: megha,
-        about: "Megha is Primary School Teacher in Shigali."
-    },
+    // {
+    //     name: "Sonam",
+    //     src: sonam,
+    //     about: "Sonam is working at the front desk as receptionist of Hyatt Centric."
+    // },
+    // {
+    //     name: "Megha",
+    //     src: megha,
+    //     about: "Megha is Primary School Teacher in Shigali."
+    // },
 ];
