@@ -6,7 +6,7 @@ import manisha from './manisha.jpg';
 import mahima from './mahima.jpg'
 import asha from './asha.jpg'
 import komal from './komal.jpg'
-import Megha from '..assets/IMG-20240824-WA0001.jpg'
+import megha from '..assets/IMG-20240824-WA0001.jpg'
 
 '
 
