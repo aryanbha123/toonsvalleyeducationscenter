@@ -43,8 +43,7 @@ export default function About() {
             <div className="">
 
               <p className='mb-4 text-start' >
-                Surendra Nath Singh was an aluminist of the prestigiuous Doon School in dehradun and compelted his education from Delhi University
-                a few after he restired as an executive in the GENERAL ELECTIVE company based in Calcutta.
+                Surendra Nath Singh was an alumnus of the prestigious Doon School in Dehradun and completed his education from Delhi University. A few years later, he retired as an executive in the GENERAL ELECTRIC COMAPANY based in Calcutta.
               </p>
               <p className='mb-4 text-start'>
                 Sunny was a “DOSCO” who had returned to his ‘roots’; having bought a small piece of land at a very scenic spot and built there a lovely cottage, then he started hunting for shrubs, plants, vines, and creepers for his garden, traveling as far as Thailand to add to his collection. The Cottage and the little garden could have been straight out of any English countryside Home and Garden magazine.
@@ -58,6 +57,7 @@ export default function About() {
               <p className='text-start mb-4'>
 
                 After much deliberation and consultations with friends, he decided to set up a school to educate the ‘Girl Child.’ Sunny went around to all the village homes selling his idea to the doubtful and reluctant villagers.
+                So In the year 2006 Mr. Sunny Singh started a little one room school in Guniyal Gaon. His sole aim was the Upliftment of the girl child. He established a trust and called it THE TONS VALLEY EDUCATION TRUST. The Trust in turn ran and funded the school that began imparting computer Education and teaching English to all the underprivileged children in the area
 
               </p>
 
@@ -65,10 +65,26 @@ export default function About() {
           </div>
 
           <div></div>
-          <Accordion>
-            <AccordionSummary id="panel-header" aria-controls="panel-content" ><span className='text-indigo-700'>
-            Read More ...</span></AccordionSummary>
+
+          <Accordion sx={{
+            boxShadow: "none"
+          }}>
+            <AccordionSummary id="panel-header" aria-controls="panel-content" >
+              <TextBox>
+
+                <span className='text-center text-indigo-700'>
+                  Read More ...
+                </span>
+              </TextBox>
+            </AccordionSummary>
             <AccordionDetails>
+
+              <p className='text-start my-4'>
+                The trust that he founded has grown in dimension and direction under the patronage of his wife Pomma Singh and son Aditya Singh.
+              </p>
+              <p className='text-start my-4'>
+                Today as we stand on the threshold of yet another year, we look back at all the years gone by with pride and a sense of accomplishment. His vision and his dream has not lost momentum and we carry forth his legacy to the best of our ability.
+              </p>
               <p className='text-start my-4'>
                 Next, Sunny requisitioned a room from the local Gram Sabha Pradhan and, with a few chairs and tables, he set about putting his ideas into practice. Six little girls joined the school. Undaunted, Sunny hired a teacher for them. By the end of the year, the numbers had swelled as the good reputation of this kind gentleman spread. So, with a few bumps and many a hiccup, the school slowly established itself, and everyone knew it as Sunny Sir’s school in Guniyal Gaon.
               </p>
@@ -89,6 +105,7 @@ export default function About() {
                 Twice a year, the children were taken out on picnics, meticulously planned from what bus to charter and right through the food they were to partake in! Sunny accompanied them on every trip, taking them to Paonta Sahib, Rishikesh, Haridwar, Mussoorie, Chandigarh, etc. His friends and well-wishers sponsored all those trips, and Sunny gave the girls money from his own pocket for shopping on these excursions.
 
                 Pressure cookers were gifted to the mothers of the girls, while the mothers of the college-going girls were presented with food processors. It was then that Sunny decided that the families of these collegiate girls too should be financially assisted in getting them married. Despite reproachment and unsolicited advice from friends, he gave them small trousseaus and a trunk full of utilities for the house and kitchen. However, none of this sidetracked him from his original vision of educating and uplifting the girl child.
+                Sunny Singh passed in the winter of 2012.
 
               </p>
             </AccordionDetails>
