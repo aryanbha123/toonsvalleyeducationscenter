@@ -24,13 +24,16 @@ import g20 from './gallery/20.jpg';
 import g21 from './gallery/21.jpg';
 import g22 from './gallery/22.jpg';
 import g23 from './gallery/23.jpg';
+import g24 from '../assets/IMG-20240823-WA0009.jpg';
+import g25 from '../assets/IMG-20190424-WA0005.jpg';
+import g26 from '../assets/IMG-20240824-WA0000.jpg';
 
 // import g10 from './gallery/10.jpg';
 // import g11 from './gallery/11.jpg';
 // import g12 from './gallery/12.jpg';
 
 const images = {
-  All: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23],
+  All: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26],
   Classroom: [g3, g9, g8, g12],
   Team: [g5, g7],
   Outing: [g1, g2, g4, g8],
