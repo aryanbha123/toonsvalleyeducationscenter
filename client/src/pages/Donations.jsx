@@ -14,7 +14,7 @@ export default function Donations() {
         <p className='text-start my-10'>
           Going to school not only ensures a dignified future and a happy present for children, but also gives them a safe space to express themselves, learn, share and grow. Children who drop out often have to work as child labour, are pushed into child marriages, or become victims of child trafficking.</p>
         <p className='my-10 text-start'>
-          Toons Vally Trust has been helping children from difficult circumstances continue their education, with the hope of a brighter future and better life. At present, we are directly providing education to over 120,000 children in 27 states of India.
+          Tons Valley Education Trust has been helping children from difficult circumstances continue their education, with the hope of a brighter future and better life.
         </p>
         <div className='my-7'>
           <a href="#" className='mb-36 bg-gradient-to-r from-slate-200 to-slate-400 px-4 py-2 rounded-xl'>Donate Now</a>

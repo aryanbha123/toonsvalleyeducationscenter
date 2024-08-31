@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import monika from '../assets/Monica.jpg';
 import radhika from '../assets/Radhika.jpg';
+import mona from '../assets/Mona.jpg';
 import { TextBox } from '../utils/TextBox';
 import { Typography } from '@mui/material';
 
@@ -19,9 +20,9 @@ export default function Staff() {
             data: "Radhika is a passionate teacher with 12 years of experience, holding a degree in mass communication. Born and raised in a remote village in Uttarakhand, she has a deep belief in the importance of education for those with limited opportunities. Radhika is dedicated to sharing her knowledge and experiences, and she has led various extracurricular activities, including dancing and singing, to enrich her students' lives."
         },
         {
-            img: monika,
+            img: mona,
             name: "Mrs. Mona Bhagat",
-            data: "Mrs. Mona Bhagat is a dedicated educator with a strong passion for teaching underprivileged children. She effectively balances her teaching responsibilities with her role as Secretary to the Administrator and Trustee at Sunny’s Amanat, managing the computer division, school budget, and attendance records. She holds multiple certifications, including an NTT and a diploma in Advanced Office Management, and  computer education across all grades since joining in 2018."
+            data: "Mona Bhagat is a dedicated teacher with a passion for educating underprivileged children. Known for her flexibility and patience, she balances teaching with her role as Secretary to the Administrator and Trustee, managing the computer division, school budget, and attendance records. She holds an NTT certification from Make Me Teacher, a degree from HNB Garhwal University, and certifications in N.C.C., office management, Tally, and entrepreneurship. Since joining Sunny’s Amanat in September 2018, she has taught both primary and senior classes. Her hobbies include photography, art and craft, and adventure sports. Mona takes pride in her role and cherishes her time with the children."
         },
     ];
 
