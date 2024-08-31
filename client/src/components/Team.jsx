@@ -11,16 +11,19 @@ export default function Staff() {
     const items = [
         {
             img: monika,
+            subhead: "Faculty",
             name: "Mrs. Monica Dangwal Kotal",
             data: "Monica Dangwal Kotal, based in Dehradun, Uttarakhand, has been working with Sunny's Amanat Guniyal Gaon Education Centre since 2013. With a BBA and MBA, she previously worked at Anand Rathi Financial Services but transitioned to education to support underprivileged children. Currently teaching middle classes, Monica is experienced in integrating technology into the classroom to enhance learning experiences."
         },
         {
             img: radhika,
+            subhead: "Faculty",
             name: "Mrs. Radhika",
             data: "Radhika is a passionate teacher with 12 years of experience, holding a degree in mass communication. Born and raised in a remote village in Uttarakhand, she has a deep belief in the importance of education for those with limited opportunities. Radhika is dedicated to sharing her knowledge and experiences, and she has led various extracurricular activities, including dancing and singing, to enrich her students' lives."
         },
         {
             img: mona,
+            subhead: "Secretary",
             name: "Mrs. Mona Bhagat",
             data: "Mona Bhagat is a dedicated teacher with a passion for educating underprivileged children. Known for her flexibility and patience, she balances teaching with her role as Secretary to the Administrator and Trustee, managing the computer division, school budget, and attendance records. She holds an NTT certification from Make Me Teacher, a degree from HNB Garhwal University, and certifications in N.C.C., office management, Tally, and entrepreneurship. Since joining Sunny’s Amanat in September 2018, she has taught both primary and senior classes. Her hobbies include photography, art and craft, and adventure sports. Mona takes pride in her role and cherishes her time with the children."
         },
@@ -60,7 +63,15 @@ export default function Staff() {
                                 />
                             </div>
                             <TextBox className='font-[Lato] text-xl flex-1 gap-3 flex flex-col justify-center items-center lg:items-start'>
-                                <Typography variant='h6' className='font-[Lato]'>{item.name}</Typography>
+                                <div className="flex flex-col justify-center items-start">
+                                    <span variant='h6' className='font-[Lato] text-bold'>{item.name}</span>
+                                    {
+                                        item.subhead &&
+                                        <>
+                                            <span className='m-0' >{item.subhead}</span>
+                                        </>
+                                    }
+                                </div>
                                 <p className='text-[16px] text-center lg:text-start'>
                                     {item.data}
                                 </p>
@@ -73,14 +84,13 @@ export default function Staff() {
                 {
                     items.map((_, index) => (
                         <div
-                        id={`i${index}`}
+                            id={`i${index}`}
                             key={index}
                             onClick={() => setActiveIndex(index)}
-                            className={`w-[10px] h-[10px] rounded-[50%] ${
-                                index === activeIndex
-                                    ? 'bg-[#152b8a] from-red-500 to-pink-500'
-                                    : 'bg-gray-300'
-                            }`}
+                            className={`w-[10px] h-[10px] rounded-[50%] ${index === activeIndex
+                                ? 'bg-[#152b8a] from-red-500 to-pink-500'
+                                : 'bg-gray-300'
+                                }`}
                         />
                     ))
                 }

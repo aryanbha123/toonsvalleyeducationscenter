@@ -144,7 +144,7 @@ export default function About() {
         <Team />
       </div>
       <div className='lg:px-20 px-5'>
-        <Title head={"Mrs Zarine Bath"} subhead={"Our Visionary Leader "} />
+        <Title head={"Mrs Zarine Bath"} subhead={"Administrator "} />
 
         <TextBox className='text-start my-8'>
 
