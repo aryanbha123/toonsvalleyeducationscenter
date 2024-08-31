@@ -24,7 +24,7 @@ export default function Header() {
 
     return (
         <div className='relative z-[90] h-[100px] lg:h-[135.03px]'>
-            <div className='fixed lg:flex hidden px-20 shadow-xl  py-5 gap-10 w-full bg-white'>
+            <div className='fixed lg:flex hidden px-20 shadow-xl py-5 gap-10 w-full bg-white'>
                 <div onClick={() => window.location.href = "/"} className="logo">
                     <img src={logo} height={"100px"} width={"100px"} alt="" />
                 </div>
