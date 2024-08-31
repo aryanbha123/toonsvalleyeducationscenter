@@ -24,9 +24,6 @@ import g25 from '../assets/25.jpg';
 import g26 from '../assets/26.jpg';
 import g27 from '../assets/27.jpg';
 import g28 from '../assets/28.jpg';
-// import g10 from './gallery/10.jpg';
-// import g11 from './gallery/11.jpg';
-// import g12 from './gallery/12.jpg';
 
 const images = {
   All: [g1, g2, g3, g4, g5, g6, g7, g8, g10, g11, g14, g17, g20, g21, g22, g24, g25, g26, g27, g28, g29, g30, g31],
@@ -55,7 +52,6 @@ export default function GalleryPage() {
     setSelectedCategories(event.target.value);
   };
 
-  // Get unique images from selected categories
   const filteredImages = Array.from(
     new Set(selectedCategories.flatMap((category) => images[category]))
   );
@@ -81,7 +77,7 @@ export default function GalleryPage() {
 
       <div className="grid mb-10 lg:px-20 px-5 grid-cols-2 md:grid-cols-3 gap-4">
         {filteredImages.map((src, index) => (
-          <div key={index} className="relative overflow-hidden rounded-lg">
+          <div key={src} className="relative overflow-hidden rounded-lg">
             <img
               src={src}
               alt={`Gallery ${index}`}
@@ -126,28 +122,11 @@ export default function GalleryPage() {
             <img
               src={selectedImage}
               alt="Selected"
+              style={{ width: '100%', height: 'auto' }}
             />
           )}
         </Box>
       </Modal>
-
-      <style jsx>{`
-        .gallery-item {
-          position: relative;
-          cursor: pointer;
-        }
-
-        .gallery-image {
-          width: 100%;
-          height: auto;
-          border-radius: 8px;
-          transition: transform 0.3s;
-        }
-
-        .gallery-image:hover {
-          transform: scale(1.05);
-        }
-      `}</style>
     </>
   );
 }
