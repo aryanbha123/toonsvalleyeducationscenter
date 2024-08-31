@@ -47,7 +47,7 @@ export default function About() {
             <div className="">
 
               <p className='mb-4 text-start' >
-                Surendra Nath Singh was an alumnus of the prestigious Doon School in Dehradun and completed his education at Delhi University. A few years after he retired as an executive at the GENERAL ELECTRIC COMPANY based in Calcutta.
+                Surendra Nath Singh was an alumnus of the prestigious Doon School in Dehradun and completed his education at Delhi University. A few years after he retired as an executive at the GENERAL ELECTRIC COMPANY based in Calcutta he returned to Dehradun.
               </p>
               <p className='mb-4 text-start'>
                 Sunny was a “DOSCO” who had returned to his ‘roots’; having bought a small piece of land at a very scenic spot and built there a lovely cottage, then he started hunting for shrubs, plants, vines, and creepers for his garden, traveling as far as Thailand to add to his collection. The Cottage and the little garden could have been straight out of any English countryside Home and Garden magazine.
@@ -137,7 +137,7 @@ export default function About() {
         <Team />
       </div>
       <div className='lg:px-20 px-5'>
-        <Title head={"Mrs Zarine Bath"} subhead={"Our Visionary Leader "} />
+        <Title head={"Mrs Zarine Bath"} subhead={"Administrator "} />
 
         <TextBox className='text-start my-8'>
 
