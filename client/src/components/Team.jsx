@@ -10,19 +10,19 @@ export default function Staff() {
 
     const items = [
         {
-            img: monika,
-            name: "Mrs. Monica Dangwal Kotal",
-            data: "Monica Dangwal Kotal, based in Dehradun, Uttarakhand, has been working with Sunny's Amanat Guniyal Gaon Education Centre since 2013. With a BBA and MBA, she previously worked at Anand Rathi Financial Services but transitioned to education to support underprivileged children. Currently teaching middle classes, Monica is experienced in integrating technology into the classroom to enhance learning experiences."
+            img: mona,
+            name: "Miss Mona Bhagat",
+            data: "Mona Bhagat is a dedicated teacher with a strong passion for educating underprivileged children. Known for her flexibility, patience, and ability to prioritize her work, she effectively balances her teaching responsibilities with her role as Secretary to the Administrator and Trustee. Mona manages the entire computer division, school budget, and attendance records. She holds a Nursery Teacher Training (NTT) certification from Make Me Teacher, a graduation degree from HNB, and an N.C.C. (National Cadet Corps) certification. Additionally, she has a Diploma in Advanced Skills for Effective Office and Change Management from IGNOU, a Certificate in Tally, and a Certificate in Entrepreneurship Development Programme from the National Institute for Entrepreneurship and Small Business Development, Government of India. Mona joined Sunny’s Amanat in September 2018, starting with the Primary Section and later expanding her role to teach computers to all junior and senior classes. Her hobbies include photography, art and craft, and adventure sports. Mona takes great pride in her role and cherishes the time she spends with the children."
         },
         {
             img: radhika,
-            name: "Mrs. Radhika",
+            name: "Miss Radhika",
             data: "Radhika is a passionate teacher with 12 years of experience, holding a degree in mass communication. Born and raised in a remote village in Uttarakhand, she has a deep belief in the importance of education for those with limited opportunities. Radhika is dedicated to sharing her knowledge and experiences, and she has led various extracurricular activities, including dancing and singing, to enrich her students' lives."
         },
         {
-            img: mona,
-            name: "Mrs. Mona Bhagat",
-            data: "Mona Bhagat is a dedicated teacher with a strong passion for educating underprivileged children. Known for her flexibility, patience, and ability to prioritize her work, she effectively balances her teaching responsibilities with her role as Secretary to the Administrator and Trustee. Mona manages the entire computer division, school budget, and attendance records. She holds a Nursery Teacher Training (NTT) certification from Make Me Teacher, a graduation degree from HNB, and an N.C.C. (National Cadet Corps) certification. Additionally, she has a Diploma in Advanced Skills for Effective Office and Change Management from IGNOU, a Certificate in Tally, and a Certificate in Entrepreneurship Development Programme from the National Institute for Entrepreneurship and Small Business Development, Government of India. Mona joined Sunny’s Amanat in September 2018, starting with the Primary Section and later expanding her role to teach computers to all junior and senior classes. Her hobbies include photography, art and craft, and adventure sports. Mona takes great pride in her role and cherishes the time she spends with the children."
+            img: monika,
+            name: "Mrs. Monica Dangwal Kotal",
+            data: "Monica Dangwal Kotal, based in Dehradun, Uttarakhand, has been working with Sunny's Amanat Guniyal Gaon Education Centre since 2013. With a BBA and MBA, she previously worked at Anand Rathi Financial Services but transitioned to education to support underprivileged children. Currently teaching middle classes, Monica is experienced in integrating technology into the classroom to enhance learning experiences."
         },
     ];
 
