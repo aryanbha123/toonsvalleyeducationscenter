@@ -7,6 +7,7 @@ import Slider from '../components/Slider';
 import slide1 from '../assets/IMG_20210213_215905.jpg';
 import slide2 from '../assets/IMG-20240824-WA0000.jpg';
 import slide3 from '../assets/IMG-20190424-WA0005.jpg';
+import slide4 from '../assets/IMG-20240823-WA0009.jpg';
 import i1 from '../assets/1.png';
 import i2 from '../assets/2.png';
 import i3 from '../assets/3.png';
@@ -26,6 +27,9 @@ export default function About() {
   },
   {
     src: slide3
+  },
+  {
+    src: slide4
   }]
   return (
     <>
