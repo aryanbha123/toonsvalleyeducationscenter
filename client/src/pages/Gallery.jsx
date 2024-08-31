@@ -9,21 +9,21 @@ import g5 from './gallery/5.jpg';
 import g6 from './gallery/6.jpg';
 import g7 from './gallery/7.jpg';
 import g8 from './gallery/8.jpg';
-// import g9 from './gallery/9.jpg';
+import g9 from './gallery/9.jpg';//
 import g10 from './gallery/10.jpg';
 import g11 from './gallery/11.jpg';
-// import g12 from './gallery/12.jpg';
-// import g13 from './gallery/13.jpg';
+import g12 from './gallery/12.jpg';//
+import g13 from './gallery/13.jpg';//
 import g14 from './gallery/14.jpg';
-// import g15 from './gallery/15.jpg';
-// import g16 from './gallery/16.jpg';
+import g15 from './gallery/15.jpg';//
+import g16 from './gallery/16.jpg';//
 import g17 from './gallery/17.jpg';
-// import g18 from './gallery/18.jpg';
-// import g19 from './gallery/19.jpg';
+import g18 from './gallery/18.jpg';//
+import g19 from './gallery/19.jpg';//
 import g20 from './gallery/20.jpg';
 import g21 from './gallery/21.jpg';
 import g22 from './gallery/22.jpg';
-// import g23 from './gallery/23.jpg';
+import g23 from './gallery/23.jpg';//
 import g31 from '../assets/IMG-20240823-WA0009.jpg';
 import g30 from '../assets/IMG-20190424-WA0005.jpg';
 import g29 from '../assets/IMG-20240824-WA0000.jpg';
