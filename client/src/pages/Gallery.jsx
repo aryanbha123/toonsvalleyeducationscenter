@@ -24,6 +24,7 @@ import g25 from './gallery/25.jpg';
 import g26 from './gallery/26.jpg';
 import g27 from './gallery/27.jpg';
 import g28 from './gallery/28.jpg';
+import g29 from './gallery/30.jpg';
 
 const images = {
   All: [g1, g2, g3, g4, g5, g6, g7, g8, g10, g11, g14, g17, g20, g21, g22, g24, g25, g26, g27, g28, g29, g30, g31],
