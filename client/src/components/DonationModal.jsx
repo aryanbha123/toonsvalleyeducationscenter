@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { TextField, Button, IconButton, Radio, FormControlLabel, RadioGroup } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { motion } from 'framer-motion';
+import { toast } from 'react-hot-toast';
 
 // Set the app element to avoid accessibility issues
 Modal.setAppElement('#root');
@@ -10,7 +11,7 @@ Modal.setAppElement('#root');
 const DonationModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [visit, setVisit] = useState('');
 
   const openModal = () => {
@@ -21,10 +22,41 @@ const DonationModal = () => {
     setIsOpen(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Donation submitted:', { name, email, visit });
-    closeModal();
+
+    // Phone number validation: must be 10 digits
+    const phonePattern = /^[0-9]{10}$/; // Regular expression to check for exactly 10 digits
+
+    if (!phonePattern.test(phone)) {
+      toast.error('Phone number must be exactly 10 digits.');
+      return; // Exit the function if the validation fails
+    }
+
+    const data = { name, phone, visit };
+
+    try {
+      const response = await toast.promise(
+        fetch('https://api.tonsvalleyeducationtrust.org/api/donation', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        }),
+        {
+          loading: 'Submitting your donation...',
+          success: 'Donation submitted successfully!',
+          error: 'Failed to submit donation.',
+        }
+      );
+      if (response.ok) {
+        setName('');
+        setPhone('');
+        setVisit('');
+        closeModal();
+      }
+    } catch (error) {
+      console.error('Error submitting donation:', error);
+    }
   };
 
   return (
@@ -45,14 +77,9 @@ const DonationModal = () => {
         isOpen={isOpen}
         onRequestClose={closeModal}
         contentLabel="Donate Modal"
-        className="modal-content fixed top-0  z-50 flex justify-center items-end h-full mx-10 w-full"
+        className="modal-content fixed top-[100px] z-[999] flex justify-center h-full lg:mx-10 w-full"
         overlayClassName="modal-overlay"
         style={{
-          position: "",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
           display: "flex",
           zIndex:999,
           justifyContent: "center",
@@ -83,11 +110,12 @@ const DonationModal = () => {
               onChange={(e) => setName(e.target.value)}
             />
             <TextField
-              label="Email Address"
+              label="Phone Number"
               variant="outlined"
               fullWidth
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              helperText="Please enter a 10-digit phone number" // Optional helper text
             />
 
             <RadioGroup value={visit} onChange={(e) => setVisit(e.target.value)}>

@@ -10,7 +10,7 @@ const Title = ({ head, subhead = false }) => {
                     </h2>
                     {
                         subhead && 
-                        <p className="font-bold text-[#010101] font-[Raleway] text-xl text-body-color dark:text-dark-6">
+                        <p className="font-bold text-[#010101] font-[Raleway] text-sm text-body-color dark:text-dark-6">
                             {subhead}
                         </p>
                     }

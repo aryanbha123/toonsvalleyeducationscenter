@@ -54,7 +54,7 @@ export default function Footer() {
         <TextBox className=' w-[80vw] lg:mb-0 mb-6'>
           <p className='text-start font-bold text-lg'>About Us</p>
           <p className='text-start' >The "Tons Valley Education Trust" Unit Guniyal Gaon Girls Education Center (commonly referred to as Tons Valley Education Trust) is an educational trust focused on promoting the upliftment and empowerment of girl child through education.</p>
-          <p className='text-start text-indigo-500 cursor-pointer' href="">Read More <ArrowRight/> </p>
+          <p className='text-start text-indigo-500 cursor-pointer' onClick={()=>{window.location.href='/about/toons-trust'}}>Read More <ArrowRight/> </p>
         </TextBox>
 
 

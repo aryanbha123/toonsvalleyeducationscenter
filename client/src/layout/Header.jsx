@@ -44,14 +44,14 @@ export default function Header() {
                         } </Link>
                         <div className={`${showDropDown ? 'absolute' : 'hidden'}  pt-[76px] w-36 top-0 list-none flex flex-col gap-2`}>
                             <div className={`bg-white px-5 py-3 w-36 top-[75px]  list-none flex flex-col gap-2`}>
-                                <li className='hover:text-gray-600 cursor-pointer '>Latest year</li>
-                                <li className='hover:text-gray-600 cursor-pointer '>Previous year</li>
-                                <li className='hover:text-gray-600 cursor-pointer '>1st year</li>
+                                <li onClick={()=> {alert("Please Try again later")}} className='hover:text-gray-600 cursor-pointer '>Latest year</li>
+                                <li onClick={()=> {alert("Please Try again later")}} className='hover:text-gray-600 cursor-pointer '>Previous year</li>
+                                <li onClick={()=> {alert("Please Try again later")}} className='hover:text-gray-600 cursor-pointer '>1st year</li>
                             </div>
                         </div>
                     </div>
                     <li><Link href="/gallery" >Gallery</Link></li>
-                    <li><Link href="/stories">Stories</Link></li>
+                    {/* <li><Link href="/stories">Stories</Link></li> */}
                     <li><Link href="/donations/make-a-change">Donations</Link></li>
                 </div>
                 <div className="absolute right-20 flex items-end gap-10">
@@ -82,14 +82,14 @@ export default function Header() {
                                 </>
                         } </Link>
                             <ul className={`${showDropDown ? 'h-auto' : 'hidden'} overflow-hidden list-none flex flex-col items-center pt-2 gap-2`}>
-                                <li><Link>Latest Year</Link></li>
-                                <li><Link>Previous Year</Link></li>
-                                <li><Link>First Year</Link></li>
+                                <li><Link onClick={() => {alert("Please try again later ! ")}} >Latest Year</Link></li>
+                                <li><Link onClick={() => {alert("Please try again later ! ")}} >Previous Year</Link></li>
+                                <li><Link onClick={() => {alert("Please try again later ! ")}} >First Year</Link></li>
                             </ul>
                         </li>
 
                         <li><Link href="/gallery" className='text-black'>Gallery</Link></li>
-                        <li><Link href="/stories" className='text-black'>Stories</Link></li>
+                        {/* <li><Link href="/stories" className='text-black'>Stories</Link></li> */}
                         <li><Link href='/donations/make-a-change' className='text-black'>Donations</Link></li>
                     </div>
                 </div>

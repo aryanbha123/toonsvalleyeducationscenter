@@ -32,7 +32,7 @@ export default function Donations() {
           future and better life.
         </p>
         <div className='my-7 flex justify-center'>
-          <DonationModal /> {/* Use the donation modal here */}
+          <DonationModal /> 
         </div>
       </TextBox>
     </>

@@ -6,6 +6,8 @@ import Footer from './layout/Footer';
 import ProtectRoute from './hooks/ProtectRoute';
 import { AuthProvider } from './AuthContext';
 import Loader from './components/Loader';
+import { CircularProgress } from '@mui/material';
+import { ToastBar, Toaster } from 'react-hot-toast';
 export default function App() {
 
   const Home = lazy(() => import('./pages/Home'));
@@ -17,7 +19,8 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Suspense fallback={ <div className='fixed top-0 left-0 h-[100vh] w-[100vw] flex justify-center items-center'> <Loader/></div>}>
+      <Toaster position='top-center' />
+        <Suspense fallback={ <div className='fixed top-0 left-0 h-[100vh] w-[100vw] flex justify-center items-center'> <CircularProgress/></div>}>
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
