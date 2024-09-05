@@ -1,42 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
-    <loc>https://www.tonsvalleyeducation.org/</loc>
+    <loc>https://www.tonsvalleyeducation.org</loc>
     <lastmod>2024-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About Us page -->
-  <url>
-    <loc>https://www.tonsvalleyeducation.org/about</loc>
-    <lastmod>2024-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Projects page -->
-  <url>
-    <loc>https://www.tonsvalleyeducation.org/projects</loc>
-    <lastmod>2024-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Donation page -->
-  <url>
-    <loc>https://www.tonsvalleyeducation.org/donate</loc>
-    <lastmod>2024-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Contact Us page -->
-  <url>
-    <loc>https://www.tonsvalleyeducation.org/contact</loc>
-    <lastmod>2024-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
