@@ -49,7 +49,7 @@ export default function Footer() {
           <p className='text-start'>Guniyal Gaon, P.O .SINOLA, Dehradun 248003</p>
           <p className='text-start'>C-3, Maharani Bagh, NEW DELHI - 110065</p>
           <br />
-          <div className='text-start'>Contact Us: Tel: +91 9811029222 | Email: guniyaleducent@gmail.com</div>
+          <div className='text-start'>Contact Us: Tel: +91 98110 29222 | Email: guniyaleducent@gmail.com</div>
         </TextBox>
         <TextBox className=' w-[80vw] lg:mb-0 mb-6'>
           <p className='text-start font-bold text-lg'>About Us</p>
