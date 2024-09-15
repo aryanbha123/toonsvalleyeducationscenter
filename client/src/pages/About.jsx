@@ -177,7 +177,7 @@ export default function About() {
         </TextBox>
       </div>
 
-      <div className='mt-7 px-4 lg:px-20  lg:pb-20 md:pb-20 pb-10 pt-3 flex flex-col gap-3'>
+      <div className='mt-7 px-4 lg:px-20  lg:pb-20 md:pb-20 pb-10 pt-3 flex flex-col-reverse'>
         <Title head={"Mr. Aditya Singh"} subhead={"Trustee"} />
 
         <TextBox className='text-start my-8'>
@@ -186,7 +186,7 @@ export default function About() {
 
             <div className="">
               <p className='text-start'>
-              Aditya Singh, trustee of the Tons Valley Education Trust, brings extensive leadership experience in corporate banking and finance. With a strong focus on community service, he actively supports education for underprivileged girls in Uttarakhand, contributing to the growth and success of the trust. His dedication to empowering the next generation reflects his passion for making a lasting impact.
+              Aditya Singh, trustee of the Tons Valley Education Trust, brings extensive leadership experience in corporate banking and finance. A graduate of St. Xavier’s College, Kolkata, and an MBA from the International Management Institute, New Delhi, he actively supports education for underprivileged girls in Uttarakhand, contributing to the growth and success of the trust. His commitment to promoting quality education and holistic development reflects his passion for empowering the next generation and making a lasting impact in the community.
               </p>
             </div>
             <img src={aditya} className='lg:w-[250px] rounded w-full' alt="" />
