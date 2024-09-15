@@ -4,7 +4,7 @@ import radhika from '../assets/Radhika.jpg';
 import mona from '../assets/Mona.jpg';
 import { TextBox } from '../utils/TextBox';
 import { Typography } from '@mui/material';
-import Title from './Title'; // Import Title component
+import Title from '../utils/Title';
 
 export default function Staff() {
     const [activeIndex, setActiveIndex] = useState(0);
