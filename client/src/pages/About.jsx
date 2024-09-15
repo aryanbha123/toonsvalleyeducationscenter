@@ -9,6 +9,7 @@ import slide2 from '../assets/IMG-20240824-WA0000.jpg';
 import slide3 from '../assets/IMG-20190424-WA0005.jpg';
 import slide4 from '../assets/IMG-20240823-WA0009.jpg';
 import i1 from '../assets/1.png';
+import aditya from '../assets/aditya.jpg';
 import i2 from '../assets/2.png';
 import i3 from '../assets/3.png';
 import i4 from '../assets/4.png';
@@ -172,6 +173,23 @@ export default function About() {
               </p>
             </div>
             <img src={Zarine} className='lg:w-[250px] rounded w-full' alt="" />
+          </div>
+        </TextBox>
+      </div>
+
+      <div className='lg:px-20 px-5 flex flex-col'>
+        <Title head={"Mr. Aditya Singh"} subhead={"Trustee"} />
+
+        <TextBox className='text-start my-8'>
+
+          <div className="flex lg:flex-row flex-col gap-4">
+
+            <div className="">
+              <p className='text-start'>
+              Aditya Singh, trustee of the Tons Valley Education Trust, brings extensive leadership experience in corporate banking and finance. With a strong focus on community service, he actively supports education for underprivileged girls in Uttarakhand, contributing to the growth and success of the trust. His dedication to empowering the next generation reflects his passion for making a lasting impact.
+              </p>
+            </div>
+            <img src={aditya} className='lg:w-[250px] rounded w-full' alt="" />
           </div>
         </TextBox>
       </div>
