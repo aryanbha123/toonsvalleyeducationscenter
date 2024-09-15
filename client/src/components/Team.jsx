@@ -9,6 +9,16 @@ export default function Staff() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const items = [
+       {
+            img: mona,
+            name: "Miss Mona Bhagat",
+            data: "Monica Dangwal Kotal, based in Dehradun, Uttarakhand, has been working with Sunny's Amanat Guniyal Gaon Education Centre since 2013. With a BBA and MBA, she previously worked at Anand Rathi Financial Services but transitioned to education to support underprivileged children. Currently teaching middle classes, Monica is experienced in integrating technology into the classroom to enhance learning experiences."
+        },
+        {
+            img: radhika,
+            name: "Miss Radhika",
+            data: "Radhika is a passionate teacher with 12 years of experience, holding a degree in mass communication. Born and raised in a remote village in Uttarakhand, she has a deep belief in the importance of education for those with limited opportunities. Radhika is dedicated to sharing her knowledge and experiences, and she has led various extracurricular activities, including dancing and singing, to enrich her students' lives."
+        },
         {
             img: monika,
             name: "Mrs. Monica Dangwal Kotal",
