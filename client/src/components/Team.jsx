@@ -4,7 +4,6 @@ import radhika from '../assets/Radhika.jpg';
 import mona from '../assets/Mona.jpg';
 import { TextBox } from '../utils/TextBox';
 import { Typography } from '@mui/material';
-import Title from '../utils/Title';
 
 export default function Staff() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -13,6 +12,7 @@ export default function Staff() {
         {
             img: mona,
             name: "Miss Mona Bhagat",
+            subhead: "Secretary",
             data: "Monica Dangwal Kotal, based in Dehradun, Uttarakhand, has been working with Sunny's Amanat Guniyal Gaon Education Centre since 2013. With a BBA and MBA, she previously worked at Anand Rathi Financial Services but transitioned to education to support underprivileged children. Currently teaching middle classes, Monica is experienced in integrating technology into the classroom to enhance learning experiences."
         },
         {
@@ -48,10 +48,7 @@ export default function Staff() {
 
     return (
         <>
-            {/* Adding the Title component */}
-            <Title head={"Miss Mona"} subhead={"Secretary"} />
-
-            <div className='relative overflow-x-hidden  lg:w-[calc(100vw-160px)] lg:h-[240px] md:h-[440px] w-[calc(100vw-40px)] h-[530px] gap-4 grid lg:grid-cols-3 grid-cols-1'>
+            <div className='relative overflow-x-hidden lg:w-[calc(100vw-160px)] lg:h-[240px] md:h-[440px] w-[calc(100vw-40px)] h-[530px] gap-4 grid lg:grid-cols-3 grid-cols-1'>
                 {
                     items.map((item, index) => (
                         <div
@@ -77,7 +74,7 @@ export default function Staff() {
                                     <span variant='h6' className='font-[Lato] text-bold'>{item.name}</span>
                                     {
                                         item.subhead &&
-                                        <span className='m-0'>{item.subhead}</span>
+                                        <span className='m-0'>{item.subhead}</span> // Conditionally render subhead
                                     }
                                 </div>
                                 <p className='text-[16px] text-center lg:text-start'>
