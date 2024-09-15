@@ -33,7 +33,7 @@ export const students = [
     {
         name: "Manisha",
         src: manisha,
-        about: " Vandana is Store ManagerX at Vimla Rugs Store at a prestigious Senior Living in the city."
+        about: " Manisha has established herself at Purkal Youth Develoment Society, a model school for first generation learners. She is involved in their Project Navjeevan since 3 years now."
     },
     {
         name: "Mahima",
