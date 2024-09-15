@@ -177,7 +177,7 @@ export default function About() {
         </TextBox>
       </div>
 
-      <div className='mt-7 px-4 lg:px-20  lg:pb-20 md:pb-20 pb-10 pt-3 flex flex-col-reverse'>
+      <div className='lg:px-20 px-5'>
         <Title head={"Mr. Aditya Singh"} subhead={"Trustee"} />
 
         <TextBox className='text-start my-8'>
