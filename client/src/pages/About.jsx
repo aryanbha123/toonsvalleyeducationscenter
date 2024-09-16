@@ -182,7 +182,7 @@ export default function About() {
 
         <TextBox className='text-start my-8'>
 
-          <div className="flex lg:flex-row flex-col gap-4">
+          <div className="flex lg:flex-row-reverse flex-col gap-4">
 
             <div className="">
               <p className='text-start'>
