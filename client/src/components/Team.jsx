@@ -13,7 +13,7 @@ export default function Staff() {
             img: mona,
             name: "Miss Mona Bhagat",
             subhead: "Secretary",
-            data: "Monica Dangwal Kotal, based in Dehradun, Uttarakhand, has been working with Sunny's Amanat Guniyal Gaon Education Centre since 2013. With a BBA and MBA, she previously worked at Anand Rathi Financial Services but transitioned to education to support underprivileged children. Currently teaching middle classes, Monica is experienced in integrating technology into the classroom to enhance learning experiences."
+            data: "Mona Bhagat is a passionate educator dedicated to teaching underprivileged children. Along with her teaching role, she serves as Secretary to the Administrator and Trustee, overseeing the computer division, school budget, and attendance. Mona holds an NTT certification from Make Me Teacher, a degree from HNB Garhwal University, an N.C.C. certification, a Diploma in Office and Change Management from IGNOU, and certificates in Tally and Entrepreneurship Development from NIESBUD. She joined Sunny’s Amanat in 2018, teaching computers to all classes. Her hobbies include photography, art, and adventure sports."
         },
         {
             img: radhika,
