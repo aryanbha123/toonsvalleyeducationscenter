@@ -5,7 +5,7 @@ import g1 from './gallery/1.jpg';
 import g2 from './gallery/2.jpg';
 import g3 from './gallery/3.jpg';
 import g4 from './gallery/4.jpg';
-import g5 from './gallery/5.jpg';
+// import g5 from './gallery/5.jpg';
 import g6 from './gallery/6.jpg';
 import g7 from './gallery/7.jpg';
 import g8 from './gallery/8.jpg';
@@ -28,7 +28,7 @@ import g28 from './gallery/28.jpg';
 const images = {
   All: [g1, g2, g3, g4, g6, g7, g8, g22, g24, g25, g26, g27, g28, g29, g30, g31],
   Classroom: [g3, g8],
-  Team: [g5, g7],
+  Team: [g7],
   Outing: [g1, g2, g4, g8],
   Students: [g1, g2, g3, g6, g8],
 };
