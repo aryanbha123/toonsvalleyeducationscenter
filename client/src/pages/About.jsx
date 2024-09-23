@@ -9,7 +9,6 @@ import slide2 from '../assets/IMG-20240824-WA0000.jpg';
 import slide3 from '../assets/IMG-20190424-WA0005.jpg';
 import slide4 from '../assets/IMG-20240823-WA0009.jpg';
 import i1 from '../assets/1.png';
-import aditya from '../assets/aditya.jpg';
 import i2 from '../assets/2.png';
 import i3 from '../assets/3.png';
 import i4 from '../assets/4.png';
@@ -169,7 +168,7 @@ export default function About() {
 
             <div className="">
               <p className='text-start'>
-                Mrs. Zarine Bath is a remarkable woman whose journey began with a strong educational foundation at Good Shepherd's Convent in Bangalore. She made significant contributions to the Army Wives Welfare Association, including setting up vocational training centers and ensuring early pension disbursement for war widows. Her passion for the environment is evident in her efforts to protect trees, preserve rivers, and care for abandoned cows. As an entrepreneur, she runs a successful cottage industry and empowers village women. Mrs. Bath also created the BILLZAR platform, supporting grassroots women entrepreneurs. Her legacy continues as she proudly carries forward her late friend's vision, leaving an indelible mark on all who know her.
+                Mrs. Zarin Bath is a remarkable woman whose journey began with a strong educational foundation at Good Shepherd's Convent in Bangalore. She made significant contributions to the Army Wives Welfare Association, including setting up vocational training centers and ensuring early pension disbursement for war widows. Her passion for the environment is evident in her efforts to protect trees, preserve rivers, and care for abandoned cows. As an entrepreneur, she runs a successful cottage industry and empowers village women. Mrs. Bath also created the BILLZAR platform, supporting grassroots women entrepreneurs. Her legacy continues as she proudly carries forward her late friend's vision, leaving an indelible mark on all who know her.
               </p>
             </div>
             <img src={Zarine} className='lg:w-[250px] rounded w-full' alt="" />
