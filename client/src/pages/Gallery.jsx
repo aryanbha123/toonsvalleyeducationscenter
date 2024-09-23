@@ -5,7 +5,7 @@ import g1 from './gallery/1.jpg';
 import g2 from './gallery/2.jpg';
 import g3 from './gallery/3.jpg';
 import g4 from './gallery/4.jpg';
-// import g5 from './gallery/5.jpg';
+import g5 from './gallery/5.jpg';
 import g6 from './gallery/6.jpg';
 import g7 from './gallery/7.jpg';
 import g8 from './gallery/8.jpg';
