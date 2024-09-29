@@ -48,7 +48,6 @@ export default function About() {
 
               <p className='mb-4 text-start' >
                 Surendra Nath Singh was an alumnus of the prestigious Doon School in Dehradun and completed his education from Delhi University. A few years later, he retired as an executive in the GENERAL ELECTRIC COMAPANY based in Calcutta.
-                Surendra Nath Singh was an alumnus of the prestigious Doon School in Dehradun and completed his education at Delhi University. A few years after he retired as an executive at the GENERAL ELECTRIC COMPANY based in Calcutta.
               </p>
               <p className='mb-4 text-start'>
                 Sunny was a “DOSCO” who had returned to his ‘roots’; having bought a small piece of land at a very scenic spot and built there a lovely cottage, then he started hunting for shrubs, plants, vines, and creepers for his garden, traveling as far as Thailand to add to his collection. The Cottage and the little garden could have been straight out of any English countryside Home and Garden magazine.
@@ -90,9 +89,6 @@ export default function About() {
                 The trust that he founded has grown in dimension and direction under the patronage of his wife Pomma Singh and son Aditya Singh.
               </p>
               <p className='text-start my-4'>
-                Today as we stand on the threshold of yet another year, we look back at all the years gone by with pride and a sense of accomplishment. His vision and his dream has not lost momentum and we carry forth his legacy to the best of our ability.
-              </p>
-              <p className='text-start my-4'>
                 Next, Sunny requisitioned a room from the local Gram Sabha Pradhan and, with a few chairs and tables, he set about putting his ideas into practice. Six little girls joined the school. Undaunted, Sunny hired a teacher for them. By the end of the year, the numbers had swelled as the good reputation of this kind gentleman spread. So, with a few bumps and many a hiccup, the school slowly established itself, and everyone knew it as Sunny Sir’s school in Guniyal Gaon.
               </p>
               <p className='text-start my-4'>
@@ -115,7 +111,7 @@ export default function About() {
                 Twice a year, the children were taken out on picnics, meticulously planned from what bus to charter and right through the food they were to partake in! Sunny accompanied them on every trip, taking them to Paonta Sahib, Rishikesh, Haridwar, Mussoorie, Chandigarh, etc. His friends and well-wishers sponsored all those trips, and Sunny gave the girls money from his own pocket for shopping on these excursions.
 
                 Pressure cookers were gifted to the mothers of the girls, while the mothers of the college-going girls were presented with food processors. It was then that Sunny decided that the families of these collegiate girls too should be financially assisted in getting them married. Despite reproachment and unsolicited advice from friends, he gave them small trousseaus and a trunk full of utilities for the house and kitchen. However, none of this sidetracked him from his original vision of educating and uplifting the girl child.
-                Sunny Singh passed in the winter of 2012.
+                Sunny Singh passed away the winter of 2012.
               </p>
               <p className='mb-4 text-start'>
                 Sunny Singh passed in the winter of 2012. The trust that he founded has grown in dimension and direction under the patronage of his wife Pomma Singh and son Aditya Singh.
@@ -160,7 +156,7 @@ export default function About() {
         <Team />
       </div>
       <div className='lg:px-20 px-5'>
-        <Title head={"Mrs Zarine Bath"} subhead={"Our Visionary Leader "} />
+        <Title head={"Mrs Zarine Bath"} subhead={"Administrator"} />
 
         <TextBox className='text-start my-8'>
 
@@ -168,7 +164,7 @@ export default function About() {
 
             <div className="">
               <p className='text-start'>
-                Mrs. Zarin Bath is a remarkable woman whose journey began with a strong educational foundation at Good Shepherd's Convent in Bangalore. She made significant contributions to the Army Wives Welfare Association, including setting up vocational training centers and ensuring early pension disbursement for war widows. Her passion for the environment is evident in her efforts to protect trees, preserve rivers, and care for abandoned cows. As an entrepreneur, she runs a successful cottage industry and empowers village women. Mrs. Bath also created the BILLZAR platform, supporting grassroots women entrepreneurs. Her legacy continues as she proudly carries forward her late friend's vision, leaving an indelible mark on all who know her.
+                Mrs. Zarine Bath believes every child deserves equal opportunities to succeed in life. As Administrator she strives to create a nurturing environment that fosters academic excellence creativity and growth for underprivileged children. She promotes gender equality and inspires girls to reach their full potential. Mrs. Bath's journey began with a strong foundation in education. She was educated at Good Shepherd's Convent in Bangalore and completed her schooling under the guidance of Miss Nundy in Hyderabad. This solid educational background laid the groundwork for her future endeavors. She made significant contributions to the Army Wives Welfare Association, including setting up vocational training centres and ensuring early pension disbursement for war widows.Passionate and committed to issues dealing with education environment protection of trees and water bodies and abandoned animals and garbage disposal. She runs a successful cottage industry in the village dealing with preservation of fruits and vegetables without harmful preservations and additives.She created and curates a vibrant platform called BILLZAR where dedicated women entrepreneurs are given safe secure and elegant platform to showcase their diverse products. An animal lover she is a happy contented wife, A proud mother and a doting Grandmother.Her contribution to the society continues as she proudly carries forward her late friend's vision, leaving an indelible mark on all who know her.
               </p>
             </div>
             <img src={Zarine} className='lg:w-[250px] rounded w-full' alt="" />
@@ -177,7 +173,7 @@ export default function About() {
       </div>
 
       <div className='lg:px-20 px-5'>
-        <Title head={"Mr. Aditya Singh"} subhead={"Trustee"} />
+        <Title head={"Mr. Aditya Singh"} subhead={"President"} />
 
         <TextBox className='text-start my-8'>
 
@@ -185,7 +181,7 @@ export default function About() {
 
             <div className="">
               <p className='text-start'>
-              Aditya Singh, trustee of the Tons Valley Education Trust, brings extensive leadership experience in corporate banking and finance. A graduate of St. Xavier’s College, Kolkata, and an MBA from the International Management Institute, New Delhi, he actively supports education for underprivileged girls in Uttarakhand, contributing to the growth and success of the trust. His commitment to promoting quality education and holistic development reflects his passion for empowering the next generation and making a lasting impact in the community.
+              Aditya Singh, trustee of the Tons Valley Education Trust, brings extensive leadership experience in corporate banking and finance. An eminent Alumnus of the prestigious Doon School in Dehradun (Uttarakhand). A model student an outstanding achiever excelling in leadership qualities as School Prefect and House Captain. Apart from Exceling in academics he proudly represented his School in Athletics, cricket, Football, and Hockey. A graduate of St. Xavier’s College, Kolkata, and an MBA from the International Management Institute, New Delhi. He began his career as a Management Trainee Corporate Finance with Ballarpur Industries and went on to the position of Senior Manager Corporate Banking with HDFC Bank. From here he went becoming the Vice President Corporate banking with the Kotak Bank ltd. Today he is doing Business Development with Zoom Insurance Brokers. Mr. Aditya has Seamlessly transitioned into the role of President Upholding carrying the torch forward with his unwavering commitment to his father philanthropic endeavors with the equal Perseverance and Passion.
               </p>
             </div>
             <img src={aditya} className='lg:w-[250px] rounded w-full' alt="" />
