@@ -103,7 +103,7 @@ export default function About() {
               </p>
               {/* <p className='mb-4 text-start'>
                 Computer training was the next thing on the cards. Mr. Alok Tandon of NIIT graciously gave assistance and guidance, and soon we had Deepika learning computer skills which she began to impart to the college girls.
-              </p> */}
+              </p> */} 
               <p className='mb-4 text-start'>
                 By December 2012, the school began to prominently figure in the local Hindi and English newspapers and attracted more supporters from amongst the Doonites. Sunny, then in his khadi kurta pajamas and Woodland shoes and his long flowing silver beard, was a familiar sight in the city, his car full of village girls being taken for special ‘treats’ to McDonald's, KFC, Pizza Hut, ice creams, and Elloras.
               </p>
