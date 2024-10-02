@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import cau1 from '../assets/IMG_20230912_223907.jpg';
 import cau2 from '../assets/IMG-20200603-WA0003.jpg';
 import cau3 from '../assets/IMG-20240820-WA0004.jpg';
-import cau4 from '../pages/gallery/9.jpg';
+// import cau4 from '../pages/gallery/9.jpg';
 
 export default function Carousel() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -10,7 +10,7 @@ export default function Carousel() {
         cau2,
         cau1,
         cau3,
-        cau4,
+        // cau4,
     ];
 
     const handlePrev = () => {
