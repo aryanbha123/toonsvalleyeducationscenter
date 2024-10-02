@@ -14,6 +14,7 @@ import i3 from '../assets/3.png';
 import i4 from '../assets/4.png';
 import i5 from '../assets/5.png';
 import Hero from '../components/Hero';
+import aditya from '../assets/aditya.jpg'
 import Zarine from '../assets/zarine.jpg'
 import Team from '../components/Team';
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
