@@ -67,7 +67,7 @@ export default function About() {
 
           <Accordion sx={{
             boxShadow: "none",
-            marginTop:"1rem"
+            marginTop: "1rem"
           }}>
             <AccordionSummary id="panel-header" aria-controls="panel-content" >
               <TextBox>
@@ -103,7 +103,7 @@ export default function About() {
               </p>
               {/* <p className='mb-4 text-start'>
                 Computer training was the next thing on the cards. Mr. Alok Tandon of NIIT graciously gave assistance and guidance, and soon we had Deepika learning computer skills which she began to impart to the college girls.
-              </p> */} 
+              </p> */}
               <p className='mb-4 text-start'>
                 By December 2012, the school began to prominently figure in the local Hindi and English newspapers and attracted more supporters from amongst the Doonites. Sunny, then in his khadi kurta pajamas and Woodland shoes and his long flowing silver beard, was a familiar sight in the city, his car full of village girls being taken for special ‘treats’ to McDonald's, KFC, Pizza Hut, ice creams, and Elloras.
               </p>
@@ -162,12 +162,12 @@ export default function About() {
 
           <div className="flex lg:flex-row flex-col gap-4">
 
-            <div className="">
-              <p className='text-start'>
-                Mrs. Zarine Bath believes every child deserves equal opportunities to succeed in life. As Administrator she strives to create a nurturing environment that fosters academic excellence creativity and growth for underprivileged children. She promotes gender equality and inspires girls to reach their full potential. Mrs. Bath's journey began with a strong foundation in education. She was educated at Good Shepherd's Convent in Bangalore and completed her schooling under the guidance of Miss Nundy in Hyderabad. This solid educational background laid the groundwork for her future endeavors. She made significant contributions to the Army Wives Welfare Association, including setting up vocational training centres and ensuring early pension disbursement for war widows.Passionate and committed to issues dealing with education environment protection of trees and water bodies and abandoned animals and garbage disposal. She runs a successful cottage industry in the village dealing with preservation of fruits and vegetables without harmful preservations and additives.She created and curates a vibrant platform called BILLZAR where dedicated women entrepreneurs are given safe secure and elegant platform to showcase their diverse products. An animal lover she is a happy contented wife, A proud mother and a doting Grandmother.Her contribution to the society continues as she proudly carries forward her late friend's vision, leaving an indelible mark on all who know her.
-              </p>
-            </div>
-            <img src={Zarine} className='lg:w-[250px] rounded w-full' alt="" />
+
+            <p className='text-start'>
+              Mrs. Zarine Bath believes every child deserves equal opportunities to succeed in life. As Administrator she strives to create a nurturing environment that fosters academic excellence creativity and growth for underprivileged children. She promotes gender equality and inspires girls to reach their full potential. Mrs. Bath's journey began with a strong foundation in education. She was educated at Good Shepherd's Convent in Bangalore and completed her schooling under the guidance of Miss Nundy in Hyderabad. This solid educational background laid the groundwork for her future endeavors. She made significant contributions to the Army Wives Welfare Association, including setting up vocational training centres and ensuring early pension disbursement for war widows.Passionate and committed to issues dealing with education environment protection of trees and water bodies and abandoned animals and garbage disposal. She runs a successful cottage industry in the village dealing with preservation of fruits and vegetables without harmful preservations and additives.She created and curates a vibrant platform called BILLZAR where dedicated women entrepreneurs are given safe secure and elegant platform to showcase their diverse products. An animal lover she is a happy contented wife, A proud mother and a doting Grandmother.Her contribution to the society continues as she proudly carries forward her late friend's vision, leaving an indelible mark on all who know her.
+            </p>
+
+            <img src={Zarine} className='lg:w-[300px] rounded w-full' alt="" />
           </div>
         </TextBox>
       </div>
@@ -181,7 +181,7 @@ export default function About() {
 
             <div className="">
               <p className='text-start'>
-              Aditya Singh, trustee of the Tons Valley Education Trust, brings extensive leadership experience in corporate banking and finance. An eminent Alumnus of the prestigious Doon School in Dehradun (Uttarakhand). A model student an outstanding achiever excelling in leadership qualities as School Prefect and House Captain. Apart from Exceling in academics he proudly represented his School in Athletics, cricket, Football, and Hockey. A graduate of St. Xavier’s College, Kolkata, and an MBA from the International Management Institute, New Delhi. He began his career as a Management Trainee Corporate Finance with Ballarpur Industries and went on to the position of Senior Manager Corporate Banking with HDFC Bank. From here he went becoming the Vice President Corporate banking with the Kotak Bank ltd. Today he is doing Business Development with Zoom Insurance Brokers. Mr. Aditya has Seamlessly transitioned into the role of President Upholding carrying the torch forward with his unwavering commitment to his father philanthropic endeavors with the equal Perseverance and Passion.
+                Aditya Singh, trustee of the Tons Valley Education Trust, brings extensive leadership experience in corporate banking and finance. An eminent Alumnus of the prestigious Doon School in Dehradun (Uttarakhand). A model student an outstanding achiever excelling in leadership qualities as School Prefect and House Captain. Apart from Exceling in academics he proudly represented his School in Athletics, cricket, Football, and Hockey. A graduate of St. Xavier’s College, Kolkata, and an MBA from the International Management Institute, New Delhi. He began his career as a Management Trainee Corporate Finance with Ballarpur Industries and went on to the position of Senior Manager Corporate Banking with HDFC Bank. From here he went becoming the Vice President Corporate banking with the Kotak Bank ltd. Today he is doing Business Development with Zoom Insurance Brokers. Mr. Aditya has Seamlessly transitioned into the role of President Upholding carrying the torch forward with his unwavering commitment to his father philanthropic endeavors with the equal Perseverance and Passion.
               </p>
             </div>
             <img src={aditya} className='lg:w-[250px] rounded w-full' alt="" />
