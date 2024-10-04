@@ -3,8 +3,10 @@ import { Modal, Box, IconButton, Select, MenuItem, Checkbox, ListItemText } from
 import CloseIcon from '@mui/icons-material/Close';
 // import g1 from './gallery/1.jpg';
 import g2 from './gallery/2.jpg';
+import g0 from './gallery/IMG20230124162827.jpg'
 import g3 from './gallery/3.jpg';
 import g4 from './gallery/4.jpg';
+import g5 from './gallery/tonsgallery.jpg'
 // import g5 from './gallery/5.jpg';
 import g6 from './gallery/6.jpg';
 import g7 from './gallery/7.jpg';
@@ -26,7 +28,7 @@ import g27 from './gallery/27.jpg';
 import g28 from './gallery/28.jpg';
 
 const images = {
-  All: [g3, g6, g7, g8, g22, g24, g25, g26, g27, g28, g30, g31],
+  All: [g3, g0, g6, g5, g7, g8, g22, g24, g25, g26, g27, g28, g30, g31],
   Classroom: [g3, g8],
   Team: [g7],
   Outing: [g2, g4, g8],
