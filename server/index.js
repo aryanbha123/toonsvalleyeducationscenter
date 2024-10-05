@@ -9,8 +9,7 @@ const port = process.env.PORT || 3001;
 const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/geo?retryWrites=true&w=majority&appName=Cluster0"
 
 
-// const allowedOrigins = ['http://localhost:3000'];
-const allowedOrigins = ['https://www.tonsvalleyeducationtrust.org/'];
+const allowedOrigins = ['https://www.tonsvalleyeducationtrust.org']; // Removed trailing '/'
 
 const corsOptions = {
     origin: function (origin, callback) {
@@ -21,14 +20,13 @@ const corsOptions = {
       }
     },
     methods: 'GET,POST',
-    allowedHeaders: ['Content-Type', 'Authorization'], 
-    credentials: true, 
-  };
-  
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true, // Required for sending cookies or auth headers
+};
 
-// Middleware setup
-app.use(cookieParser());
+
 app.use(cors(corsOptions));
+app.use(cookieParser());
 app.use(express.json());
 app.use(require('./routes/userRoutes'));
 app.use(require('./routes/auth'));
