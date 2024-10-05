@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     // const baseurl = "http://localhost:3001";
-    const baseurl = "https://api.tonsvalleyeducationtrust.org/";
+    const baseurl = "https://api.tonsvalleyeducationtrust.org";
     const navigate = useNavigate();
     const checkAuth = async () => {
         try {
