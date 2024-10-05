@@ -10,7 +10,7 @@ const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.m
 
 
 // const allowedOrigins = ['http://localhost:3000'];
-const allowedOrigins = ['https://api.tonsvalleyeducationtrust.org/'];
+const allowedOrigins = ['https://tonsvalleyeducationtrust.org/'];
 
 const corsOptions = {
     origin: function (origin, callback) {
