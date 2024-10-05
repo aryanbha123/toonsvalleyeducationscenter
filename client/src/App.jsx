@@ -20,6 +20,7 @@ export default function App() {
   const NotFound = lazy(() => import('./pages/NotFound'));
   const Admin = lazy(() => import('./admin/Home'));
   const AdminDonation = lazy(() => import('./admin/Donation'));
+  const AdmdinGallery = lazy(() => import('./admin/Gallery'));
   return (
     <BrowserRouter>
       <AuthProvider>
@@ -37,6 +38,7 @@ export default function App() {
               <Route path='/admin' element={<Admin></Admin>} />
               <Route path='/admin/donations' element={<AdminDonation></AdminDonation>} />
               <Route path='/admin/newsletters' element={<AdminDonation></AdminDonation>} />
+              <Route path='/admin/gallery' element={<AdmdinGallery></AdmdinGallery>} />
             </Route>
             <Route path='*' element={<NotFound />} />
           </Routes>

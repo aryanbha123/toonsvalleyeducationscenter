@@ -3,59 +3,115 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const cookieParser = require('cookie-parser');
+const path = require('path');
+const multer = require('multer');
+const fs = require('fs');
+
 const app = express();
 const port = process.env.PORT || 3001;
 
-const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/geo?retryWrites=true&w=majority&appName=Cluster0"
+
+const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/geo?retryWrites=true&w=majority&appName=Cluster0";
 
 
-const allowedOrigins = ['https://www.tonsvalleyeducationtrust.org']; // Removed trailing '/'
-
+const allowedOrigins = ['http://localhost:3000'];
 const corsOptions = {
     origin: function (origin, callback) {
-      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
+        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
     },
     methods: 'GET,POST',
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true, // Required for sending cookies or auth headers
+    credentials: true,
 };
 
 
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir);
+}
+
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, uploadDir); // Directory to save images
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
+    },
+});
+const upload = multer({ storage });
+
+const imageSchema = new mongoose.Schema({
+    url: { type: String, required: true },
+});
+const Image = mongoose.model('Image', imageSchema);
+
+app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieParser());
-app.use(express.json());
 app.use(require('./routes/userRoutes'));
 app.use(require('./routes/auth'));
+app.use(express.static('uploads')); // Serve images statically
 
+// Image upload route
+app.post('/upload', upload.single('image'), async (req, res) => {
+    if (!req.file) {
+        return res.status(400).send('No file uploaded.');
+    }
+
+    const imageUrl = `${req.protocol}://${req.get('host')}/${req.file.path}`;
+    const newImage = new Image({ url: imageUrl });
+
+    try {
+        await newImage.save();
+        res.status(200).json({ message: 'Image uploaded successfully', imageUrl });
+    } catch (error) {
+        res.status(500).json({ message: 'Error saving image', error });
+    }
+});
+
+// Get all images route
+app.get('/get/images', async (req, res) => {
+    try {
+        const img = await Image.find();
+        res.status(200).json({ img });
+    } catch (error) {
+        res.status(400).json({ error });
+    }
+});
+
+// Basic test route
 app.get('/', (req, res) => {
     res.send("Server Live");
 });
 
+// Donation request handling route with email notification
 app.post('/api/donation', async (req, res) => {
-    const { name, phone, visit } = req.body; 
-   
+    const { name, phone, visit } = req.body;
+
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'aryanbhandari4077@gmail.com',
-            pass: 'pijr hbnz zuhf lbvz',        },
+            pass: 'pijr hbnz zuhf lbvz', // Don't expose sensitive credentials in production!
+        },
         tls: {
-            rejectUnauthorized: false 
-        }
+            rejectUnauthorized: false,
+        },
     });
-    
+
     const mailOptions = {
-        from: 'aryanbhandari4077@gmail.com', // Replace with your email
-        to: 'chhavibhandari15jun@gmail.com', // Replace with the recipient email
+        from: 'aryanbhandari4077@gmail.com',
+        to: 'chhavibhandari15jun@gmail.com',
         subject: 'New Donation Request',
         text: `Donation details:
         Name: ${name}
         Phone: ${phone}
-        Visit preference: ${visit === 'yes' ? 'Scheduled Visit' : 'No Visit'}`
+        Visit preference: ${visit === 'yes' ? 'Scheduled Visit' : 'No Visit'}`,
     };
 
     try {
@@ -67,24 +123,16 @@ app.post('/api/donation', async (req, res) => {
     }
 });
 
+// MongoDB connection
+mongoose.connect(URI)
+    .then(() => {
+        console.log('Connected to MongoDB');
+    })
+    .catch((error) => {
+        console.error('Error connecting to MongoDB:', error);
+    });
 
-
-app.get('/get/donations' , (req,res) => {
-    try{
-
-    }catch(error){
-
-    }
-    res.status(200).json({});
-})
-
-mongoose.connect(URI).then(() => {
-    console.log('Connected to MongoDB');
-}).catch((error) => {
-    console.error('Error connecting to MongoDB:', error);
-});
-
-
+// Start the server
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });

@@ -30,6 +30,11 @@ export default function AdminDashboard() {
   const navigateToNewsletterPage = () => {
     navigate('/admin/newsletters'); // Change this to the correct path for your newsletters page
   };
+  const navigateToGalleryPage = () => {
+    navigate('/admin/gallery'); // Change this to the correct path for your newsletters page
+  };
+
+  
 
   return (
     <>
@@ -37,11 +42,9 @@ export default function AdminDashboard() {
 
       {/* Admin Panel Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
-        
-        {/* 1st Div - Manage Gallery Section */}
         <div 
           className="border p-6 bg-gray-100 rounded-lg shadow-lg flex flex-col justify-between"
-          onClick={showContactDeveloperPopup} // Trigger the popup on click
+          onClick={navigateToGalleryPage} 
         >
           <h2 className="text-xl font-semibold text-gray-800">Manage Gallery</h2>
           <p className="mt-4 text-gray-600">Upload, edit, or delete gallery images for the website.</p>
