@@ -1,5 +1,10 @@
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
+const authMiddleware = require('../middlewares/authCheck');
 
-router.post('/register' , (req,res) => {
 
-})
+router.get('/get/user', authMiddleware,async (req, res) => {
+    res.json({ user: req.user , img:req.user.image });
+});
+
+module.exports = router;

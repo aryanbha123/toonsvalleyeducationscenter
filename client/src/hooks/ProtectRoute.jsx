@@ -4,7 +4,9 @@ import { useAuth } from '../AuthContext';
 
 export default function ProtectRoute() {
     // const { user } = useAuth();
-    const user = true;
+    // const user = true;
+
+    const { user } = useAuth()
 
     if (!user) {
         return <Navigate to="/" />;

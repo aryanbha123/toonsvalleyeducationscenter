@@ -3,6 +3,7 @@ import { Drawer, AppBar, Toolbar, IconButton, List, ListItem, ListItemText, Typo
 import MenuIcon from '@mui/icons-material/Menu';
 import { Logout } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom'; // Optional, for routing
+import { useAuth } from '../AuthContext';
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -25,6 +26,10 @@ export default function Navbar() {
         navigate(path); // Navigate to the corresponding path
     };
 
+    const { logout} = useAuth();
+    const handelLogout = () => {
+        logout();
+    }
     return (
         <>
             {/* Top AppBar */}
@@ -46,7 +51,7 @@ export default function Navbar() {
                     </Typography>
 
                     {/* Logout Icon */}
-                    <IconButton color='inherit' onClick={() => console.log('Logging out')}>
+                    <IconButton color='inherit' onClick={handelLogout}  >
                         <Logout />
                     </IconButton>
                 </Toolbar>

@@ -26,6 +26,11 @@ export default function AdminDashboard() {
     navigate('/admin/donation'); // Change this to the correct path for your donation page
   };
 
+  // Function to navigate to the newsletters management page
+  const navigateToNewsletterPage = () => {
+    navigate('/admin/newsletters'); // Change this to the correct path for your newsletters page
+  };
+
   return (
     <>
       <Navbar />
@@ -81,6 +86,20 @@ export default function AdminDashboard() {
             View Donation Page
           </button>
         </div>
+
+        {/* 5th Div - Manage Newsletters Section */}
+        <div 
+          className="border p-6 bg-green-100 text-green-700 rounded-lg shadow-lg flex flex-col justify-between"
+          onClick={navigateToNewsletterPage} // Navigate to the newsletters page on click
+        >
+          <h2 className="text-xl font-semibold">Manage Newsletters</h2>
+          <p className="mt-4">Create, edit, or delete newsletters for subscribers.</p>
+          <button 
+            className="mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition">
+            Manage Newsletters
+          </button>
+        </div>
+
       </div>
 
       {/* ToastContainer for Popup Notifications */}

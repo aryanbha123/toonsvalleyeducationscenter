@@ -9,6 +9,7 @@ import Loader from './components/Loader';
 import { CircularProgress } from '@mui/material';
 import { ToastBar, Toaster } from 'react-hot-toast';
 import Layout from './layout/Layout';
+import LoginPage from './admin/LoginPage';
 export default function App() {
 
   const Home = lazy(() => import('./pages/Home'));
@@ -20,8 +21,8 @@ export default function App() {
   const Admin = lazy(() => import('./admin/Home'));
   const AdminDonation = lazy(() => import('./admin/Donation'));
   return (
-    <AuthProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <Toaster position='top-center' />
         <Suspense fallback={<div className='fixed top-0 left-0 h-[100vh] w-[100vw] flex justify-center items-center'> <CircularProgress /></div>}>
           <Routes>
@@ -29,18 +30,18 @@ export default function App() {
             <Route path='/about/toons-trust' element={<Layout wrappedComponents={<About />} />} />
             <Route path='/donations/make-a-change' element={<Layout wrappedComponents={<Donations />} />} />
             <Route path='/gallery' element={<Layout wrappedComponents={< Gallery />} />} />
-            <Route path='/stories' element={<Layout  wrappedComponents={<Stories />} />} />
+            <Route path='/stories' element={<Layout wrappedComponents={<Stories />} />} />
+          
+            <Route path='/login' element={<LoginPage />} />
             <Route element={<ProtectRoute />} >
               <Route path='/admin' element={<Admin></Admin>} />
-              <Route path='/admin/donation' element={<AdminDonation></AdminDonation>} />
+              <Route path='/admin/donations' element={<AdminDonation></AdminDonation>} />
+              <Route path='/admin/newsletters' element={<AdminDonation></AdminDonation>} />
             </Route>
             <Route path='*' element={<NotFound />} />
           </Routes>
-          <Routes>
-            <Route path="/admin" element={<ProtectRoute />} ></Route>
-          </Routes>
         </Suspense>
-      </BrowserRouter>
-    </AuthProvider>
+      </AuthProvider>
+    </BrowserRouter>
   )
 }
