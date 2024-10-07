@@ -28,9 +28,9 @@ import g27 from './gallery/27.jpg';
 import g28 from './gallery/28.jpg';
 
 const images = {
-  All: [g3, g0, g6, g5, g7, g8, g22, g24, g25, g26, g27, g28,g29, g30, g31],
+  All: [g3, g0, g6, g5, g8, g22, g24, g25, g26, g27, g28,g29, g30, g31],
   Classroom: [g3, g8],
-  Team: [g7],
+  Team: [],
   Outing: [g2, g4, g8],
   Students: [g3, g6, g8],
 };
