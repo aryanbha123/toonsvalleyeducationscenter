@@ -9,7 +9,7 @@ import g4 from './gallery/4.jpg';
 import g5 from './gallery/tonsgallery.jpg'
 // import g5 from './gallery/5.jpg';
 import g6 from './gallery/6.jpg';
-import g7 from './gallery/7.jpg';
+// import g7 from './gallery/7.jpg';
 import g8 from './gallery/8.jpg';
 // import g10 from './gallery/10.jpg';
 // import g11 from './gallery/11.jpg';
