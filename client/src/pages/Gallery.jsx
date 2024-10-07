@@ -20,7 +20,7 @@ import g8 from './gallery/8.jpg';
 import g22 from './gallery/22.jpg';
 import g31 from '../assets/IMG-20240823-WA0009.jpg';
 import g30 from '../assets/IMG-20190424-WA0005.jpg';
-// import g29 from '../assets/IMG-20240824-WA0000.jpg';
+import g29 from '../assets/IMG-20240821-WA0001.jpg';
 import g24 from './gallery/24.jpg';
 import g25 from './gallery/25.jpg';
 import g26 from './gallery/26.jpg';
@@ -28,7 +28,7 @@ import g27 from './gallery/27.jpg';
 import g28 from './gallery/28.jpg';
 
 const images = {
-  All: [g3, g0, g6, g5, g7, g8, g22, g24, g25, g26, g27, g28, g30, g31],
+  All: [g3, g0, g6, g5, g7, g8, g22, g24, g25, g26, g27, g28,g29, g30, g31],
   Classroom: [g3, g8],
   Team: [g7],
   Outing: [g2, g4, g8],
