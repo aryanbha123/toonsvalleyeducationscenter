@@ -15,7 +15,7 @@ const ImageUpload = () => {
         const fetchImages = async () => {
             try {
                 const response = await axios.get(`${baseurl}/get/images`, { withCredentials: true });
-                setImages(response.data); // Assuming the response is an array of image objects
+                setImages(response.data.img);
             } catch (error) {
                 console.error("Error fetching images:", error);
                 toast.error("Failed to fetch images.");
@@ -99,7 +99,8 @@ const ImageUpload = () => {
                 <List>
                     {images.map(image => (
                         <ListItem key={image.id}>
-                            <ListItemText primary={image.name} />
+                            <img src={image.url} alt="img" />
+                            {/* <ListItemText primary={image.url} /> */}
                             <ListItemSecondaryAction>
                                 <IconButton edge="end" aria-label="delete" onClick={() => handleDelete(image.id)}>
                                     <DeleteIcon />

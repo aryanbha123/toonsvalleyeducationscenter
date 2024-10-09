@@ -37,10 +37,10 @@ if (!fs.existsSync(uploadDir)) {
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, uploadDir); // Directory to save images
+        cb(null, uploadDir);
     },
     filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
+        cb(null, Date.now() + path.extname(file.originalname));
     },
 });
 const upload = multer({ storage });
@@ -63,7 +63,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
         return res.status(400).send('No file uploaded.');
     }
 
-    const imageUrl = `${req.protocol}://${req.get('host')}/${req.file.path}`;
+    const imageUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
     const newImage = new Image({ url: imageUrl });
 
     try {
