@@ -13,13 +13,14 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const baseurl = "http://localhost:3001";
+    const baseurl = "http://localhost:3000";
     // const baseurl = "https://api.tonsvalleyeducationtrust.org";
     const navigate = useNavigate();
     const checkAuth = async () => {
         try {
             const response = await axios.get(`${baseurl}/get/user`,{withCredentials:true});
             setUser(response.data.user);
+            
             navigate('/admin')
         } catch (error) {
             console.error('User is not authenticated', error);

@@ -8,13 +8,13 @@ const multer = require('multer');
 const fs = require('fs');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 
 const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/geo?retryWrites=true&w=majority&appName=Cluster0";
 
-
-const allowedOrigins = ['http://localhost:3000'];
+app.use(cookieParser());
+const allowedOrigins = ['http://localhost:3001'];
 const corsOptions = {
     origin: function (origin, callback) {
         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
@@ -52,12 +52,11 @@ const Image = mongoose.model('Image', imageSchema);
 
 app.use(express.json());
 app.use(cors(corsOptions));
-app.use(cookieParser());
+
 app.use(require('./routes/userRoutes'));
 app.use(require('./routes/auth'));
-app.use(express.static('uploads')); // Serve images statically
+app.use(express.static('uploads'));
 
-// Image upload route
 app.post('/upload', upload.single('image'), async (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
@@ -74,7 +73,39 @@ app.post('/upload', upload.single('image'), async (req, res) => {
     }
 });
 
-// Get all images route
+
+app.get('/uploads/:id', (req, res) => {
+    const imageId = req.params.id;
+    const imagePath = path.join(__dirname, 'uploads', imageId);
+
+    res.sendFile(imagePath, (err) => {
+        if (err) {
+            res.status(404).send('Image not found');
+        }
+    });
+});
+
+
+app.post('/delete/img/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        // Wait for the deletion to complete
+        const img = await Image.findByIdAndDelete(id);
+
+        // Check if the image was found and deleted
+        if (!img) {
+            return res.status(404).json({ success: false, msg: "Image not found" });
+        }
+
+        // If deleted successfully, return success response
+        res.status(200).json({ success: true, msg: "Deleted Successfully" });
+    } catch (err) {
+        // Handle errors and return error response
+        res.status(500).json({ success: false, err: "Server Error" });
+    }
+});
+
 app.get('/get/images', async (req, res) => {
     try {
         const img = await Image.find();
