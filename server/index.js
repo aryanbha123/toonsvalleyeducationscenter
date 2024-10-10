@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/geo?retryWrites=true&w=majority&appName=Cluster0";
 
 app.use(cookieParser());
-const allowedOrigins = ['http://localhost:3001'];
+const allowedOrigins = ['https://api.tonsvalleyeducationtrust.org'];
 const corsOptions = {
     origin: function (origin, callback) {
         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
