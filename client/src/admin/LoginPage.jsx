@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Grid, Typography, Paper, Box, Alert } from '@mui/material';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 
 const LoginPage = () => {
@@ -77,6 +78,8 @@ const LoginPage = () => {
                         >
                             Login
                         </Button>
+
+                        <Link className='text-indigo-500' to="/request-reset-password" >Forgot Password</Link>
                     </Box>
                 </Box>
             </Grid>

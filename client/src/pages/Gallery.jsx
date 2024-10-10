@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { Modal, Box, IconButton, Select, MenuItem, Checkbox, ListItemText } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Select, MenuItem } from '@mui/material';
 import axios from 'axios';
+import { Lightbox } from 'react-modal-image'; // Correctly importing Lightbox
 import { useAuth } from '../AuthContext';
 
 export default function GalleryPage() {
   const { baseurl } = useAuth();
   const [images, setImages] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState('');
 
-  const [selectedCategories, setSelectedCategories] = useState(['All']);
-  const [open, setOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const categories = ['All', 'Students', 'Classroom', 'Outing', 'Staff', 'Others'];
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const res = await axios.get(`${baseurl}/get/images`);
-        console.log(res.data.img);
-        setImages(res.data.img); // Set the image data array from response
+        console.log('Fetched Images:', res.data.img);
+        setImages(res.data.img);
       } catch (error) {
         console.error('Error fetching images:', error);
       }
@@ -26,42 +27,30 @@ export default function GalleryPage() {
     fetchImages();
   }, [baseurl]);
 
-  const handleOpen = (image) => {
-    setSelectedImage(image);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedImage(null);
-  };
-
   const handleCategoryChange = (event) => {
-    const selected = event.target.value;
-    if (selected.includes('All')) {
-      setSelectedCategories(['All']);
-    } else {
-      setSelectedCategories(selected.length ? selected : ['All']);
-    }
+    setSelectedCategory(event.target.value);
   };
 
-  // All images will be displayed as there is no category filtering in the provided data
-  const filteredImages = images.map((image) => image.url);
+  const filteredImages = selectedCategory === 'All'
+    ? images
+    : images.filter((image) => image.type === selectedCategory);
+
+  const handleOpenLightbox = (imageUrl) => {
+    setCurrentImage(imageUrl);
+    setLightboxOpen(true);
+  };
 
   return (
     <>
       <div className="flex items-start justify-start lg:px-20 px-5 py-4 md:py-8 flex-wrap">
         <Select
-          multiple
-          value={selectedCategories}
+          value={selectedCategory}
           onChange={handleCategoryChange}
-          renderValue={(selected) => selected.join(', ')}
           sx={{ minWidth: 200 }}
         >
-          {['All'].map((category) => (
+          {categories.map((category) => (
             <MenuItem key={category} value={category}>
-              <Checkbox checked={selectedCategories.includes(category)} />
-              <ListItemText primary={category} />
+              {category}
             </MenuItem>
           ))}
         </Select>
@@ -69,62 +58,28 @@ export default function GalleryPage() {
 
       <div className="grid mb-10 lg:px-20 px-5 grid-cols-2 md:grid-cols-3 gap-4">
         {filteredImages.length > 0 ? (
-          filteredImages.map((src, index) => (
+          filteredImages.map((image, index) => (
             <div key={index} className="relative overflow-hidden rounded-lg">
               <img
-                src={src}
+                src={image.url}
                 alt={`Gallery ${index}`}
                 className="object-cover w-full h-64 cursor-pointer"
-                onClick={() => handleOpen(src)}
+                onClick={() => handleOpenLightbox(image.url)} // Open lightbox on click
               />
             </div>
           ))
         ) : (
-          <p>No images available</p>
+          <p>No images available in the selected category</p>
         )}
       </div>
 
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="image-modal"
-        aria-describedby="image-modal-description"
-      >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '80%',
-            maxHeight: '80%',
-            bgcolor: 'background.paper',
-            borderRadius: '8px',
-            boxShadow: 24,
-            p: 4,
-            overflow: 'hidden',
-          }}
-        >
-          <IconButton
-            sx={{
-              position: 'absolute',
-              top: '10px',
-              right: '10px',
-              color: 'gray',
-            }}
-            onClick={handleClose}
-          >
-            <CloseIcon />
-          </IconButton>
-          {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Selected"
-              style={{ width: '100%', height: 'auto' }}
-            />
-          )}
-        </Box>
-      </Modal>
+      {lightboxOpen && (
+        <Lightbox
+          medium={currentImage}
+          large={currentImage}
+          onClose={() => setLightboxOpen(false)} // Close lightbox
+        />
+      )}
     </>
   );
 }

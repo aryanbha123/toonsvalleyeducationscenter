@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
 const router = express.Router();
-
+const nodemailer = require('nodemailer')
 // Secret key for signing JWT
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret_key';
 
@@ -22,7 +22,7 @@ router.post('/register', async (req, res) => {
             return res.status(400).json({ message: 'User already exists' });
         }
 
-       
+
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const newUser = new User({
@@ -88,20 +88,45 @@ router.post('/logout', (req, res) => {
     }
 });
 
+
 router.post('/forgot-password', async (req, res) => {
     const { email } = req.body;
 
     try {
+        // Check if user exists
         const user = await User.findOne({ email });
         if (!user) {
             return res.status(400).json({ message: 'User with this email does not exist' });
         }
 
+        // Create a password reset token
+        const resetToken = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '5m' });
 
-        const resetToken = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '15m' });
+        // Create a transporter for sending emails
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'aryanbhandari4077@gmail.com',
+                pass: 'pijr hbnz zuhf lbvz', // Don't expose sensitive credentials in production!
+            },
+            tls: {
+                rejectUnauthorized: false,
+            },
+        });
 
-        console.log(`Password reset link: http://yourapp.com/reset-password/${resetToken}`);
+        // Set up the mail options for the password reset email
+        const mailOptions = {
+            from: 'aryanbhandari4077@gmail.com',
+            to: email,
+            subject: 'Password Reset Request',
+            text: `You requested a password reset. Click the link to reset your password: 
+            http://localhost:3000/reset-password/${resetToken}`,
+        };
 
+        // Send the email
+        await transporter.sendMail(mailOptions);
+
+        // Send success response
         res.status(200).json({ message: 'Password reset link sent' });
     } catch (error) {
         console.error(error);

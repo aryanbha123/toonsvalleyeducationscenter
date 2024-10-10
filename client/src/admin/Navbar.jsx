@@ -15,7 +15,7 @@ export default function Navbar() {
 
     const menuItems = [
         { text: 'Home', path: '/admin' },
-        { text: 'About', path: '/admin/text' },
+        // { text: 'About', path: '/admin/text' },
         { text: 'Donations', path: '/admin/donations' },
         { text: 'Gallery', path: '/admin/gallery' },
     ];

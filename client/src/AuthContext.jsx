@@ -1,8 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
-import Loader from './components/Loader';
-import zIndex from '@mui/material/styles/zIndex';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const AuthContext = createContext();
 
@@ -13,17 +11,28 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    // const baseurl = "http://localhost:3001";
-    const baseurl = "https://api.tonsvalleyeducationtrust.org";
+    const baseurl = "https://api.tonsvalleyeducationtrust.org/"; // Replace with actual base URL for production
     const navigate = useNavigate();
+    const location = useLocation(); // Get the current location (URL)
+
     const checkAuth = async () => {
         try {
-            const response = await axios.get(`${baseurl}/get/user`,{withCredentials:true});
+            const response = await axios.get(`${baseurl}/get/user`, { withCredentials: true });
             setUser(response.data.user);
-            
-            navigate('/admin')
+
+            if (response.data.user) {
+                if (location.pathname === '/admin' || location.pathname.startsWith('/admin/')) {
+                    navigate(`${location.pathname}`)
+                } else {
+                    navigate('/admin');
+                }
+            } else {
+                navigate('/');
+                console.log("else conditio running")
+            }
         } catch (error) {
             console.error('User is not authenticated', error);
+            // navigate('/'); 
         } finally {
             setLoading(false);
         }
@@ -33,13 +42,12 @@ export const AuthProvider = ({ children }) => {
         checkAuth();
     }, []);
 
-    const login = async ({email,password}) => {
+    const login = async ({ email, password }) => {
         setLoading(true);
         try {
-            const response = await axios.post(`${baseurl}/login`, {email,password},{withCredentials:true});
-            console.log(response)
-            // setUser(response.data.user);
-            checkAuth();
+            const response = await axios.post(`${baseurl}/login`, { email, password }, { withCredentials: true });
+            console.log(response);
+            checkAuth(); // After login, check authentication status.
         } catch (error) {
             console.error('Login failed', error);
             throw error;
@@ -51,8 +59,9 @@ export const AuthProvider = ({ children }) => {
     const logout = async () => {
         setLoading(true);
         try {
-            await axios.post(`${baseurl}/logout`,{},{withCredentials:true});
+            await axios.post(`${baseurl}/logout`, {}, { withCredentials: true });
             setUser(null);
+            navigate('/login'); // Redirect to login page after logout
         } catch (error) {
             console.error('Logout failed', error);
             throw error;
@@ -60,6 +69,7 @@ export const AuthProvider = ({ children }) => {
             setLoading(false);
         }
     };
+
     const value = {
         baseurl,
         user,

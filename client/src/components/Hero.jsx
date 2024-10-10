@@ -5,15 +5,15 @@ export default function Hero() {
   return (
     <div id=''>
       <section className="relative bg-blueGray-50">
-        <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+        <div className="relative pt-16 pb-12 flex content-center items-center justify-center min-h-screen-75">
           <div className="absolute top-0 w-full h-full bg-center bg-cover" style={{
             backgroundImage: `url(${backgroundImg})`
           }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-black"></span>
+            <span id="blackOverlay" className="w-full h-full absolute opacity-70 bg-black"></span>
           </div>
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
-              <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div className="w-full lg:w-6/12 px-3 ml-auto mr-auto text-center">
                 <div className="">
                   <h1 className="text-white font-semibold text-5xl">
                     Welcome to Tons Valley Education Trust.

@@ -23,7 +23,7 @@ export default function AdminDashboard() {
 
   // Function to navigate to the donation page
   const navigateToDonationPage = () => {
-    navigate('/admin/donation'); // Change this to the correct path for your donation page
+    navigate('/admin/donations'); // Change this to the correct path for your donation page
   };
 
   // Function to navigate to the newsletters management page

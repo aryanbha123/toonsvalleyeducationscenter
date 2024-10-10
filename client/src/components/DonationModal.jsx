@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { TextField, Button, IconButton, Radio, FormControlLabel, RadioGroup } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '../AuthContext';
 
-// Set the app element to avoid accessibility issues
 Modal.setAppElement('#root');
 
 const DonationModal = () => {
@@ -13,6 +13,8 @@ const DonationModal = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [visit, setVisit] = useState('');
+  const [isPhoneValid, setIsPhoneValid] = useState(false); // Track phone validation
+  const [errorMessage, setErrorMessage] = useState(''); // Error message for phone number validation
 
   const openModal = () => {
     setIsOpen(true);
@@ -22,22 +24,28 @@ const DonationModal = () => {
     setIsOpen(false);
   };
 
+  const { baseurl } = useAuth();
+
+  // Validate phone number when the input changes
+  useEffect(() => {
+    const phonePattern = /^[0-9]{10}$/; // Regular expression for exactly 10 digits
+    if (!phonePattern.test(phone)) {
+      setIsPhoneValid(false);
+      setErrorMessage('Phone number must be exactly 10 digits.');
+    } else {
+      setIsPhoneValid(true);
+      setErrorMessage(''); // Clear the error message when valid
+    }
+  }, [phone]); // Re-validate on phone input change
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Phone number validation: must be 10 digits
-    const phonePattern = /^[0-9]{10}$/; // Regular expression to check for exactly 10 digits
-
-    if (!phonePattern.test(phone)) {
-      toast.error('Phone number must be exactly 10 digits.');
-      return; // Exit the function if the validation fails
-    }
 
     const data = { name, phone, visit };
 
     try {
       const response = await toast.promise(
-        fetch('https://api.tonsvalleyeducationtrust.org/api/donation', {
+        fetch(`${baseurl}/api/donation`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
@@ -60,7 +68,7 @@ const DonationModal = () => {
   };
 
   return (
-    <div className='relative top-0' >
+    <div className="relative top-0">
       <Button
         variant="contained"
         style={{
@@ -80,10 +88,10 @@ const DonationModal = () => {
         className="modal-content fixed top-[100px] z-[999] flex justify-center h-full lg:mx-10 w-full"
         overlayClassName="modal-overlay"
         style={{
-          display: "flex",
-          zIndex:999,
-          justifyContent: "center",
-          alignItems: "center",
+          display: 'flex',
+          zIndex: 999,
+          justifyContent: 'center',
+          alignItems: 'center',
           background: 'rgba(0, 0, 0, 0.7)',
         }}
       >
@@ -115,7 +123,8 @@ const DonationModal = () => {
               fullWidth
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              helperText="Please enter a 10-digit phone number" // Optional helper text
+              helperText={errorMessage} // Display the error message below the input field
+              error={!isPhoneValid} // Highlight field in red if invalid
             />
 
             <RadioGroup value={visit} onChange={(e) => setVisit(e.target.value)}>
@@ -127,18 +136,17 @@ const DonationModal = () => {
               type="submit"
               variant="contained"
               style={{
-                background: 'linear-gradient(to right, #f50057, #ff4081)',
+                background: isPhoneValid ? 'linear-gradient(to right, #f50057, #ff4081)' : 'grey',
                 color: 'white',
                 borderRadius: '20px',
               }}
+              disabled={!isPhoneValid} // Disable button if the phone is invalid
             >
               Send
             </Button>
           </form>
 
-          <p className="text-sm text-gray-500 mt-4">
-            *PAN card is mandatory for donation
-          </p>
+          <p className="text-sm text-gray-500 mt-4">*PAN card is mandatory for donation</p>
         </motion.div>
       </Modal>
     </div>
