@@ -8,13 +8,13 @@ const multer = require('multer');
 const fs = require('fs');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 
 const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/geo?retryWrites=true&w=majority&appName=Cluster0";
 
 app.use(cookieParser());
-const allowedOrigins = ['https://www.tonsvalleyeducationtrust.org'];
+const allowedOrigins = ['https://www.tonsvalleyeducationtrust.org' , 'http://localhost:3000'];
 const corsOptions = {
     origin: function (origin, callback) {
         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
