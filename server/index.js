@@ -10,11 +10,7 @@ const multer = require('multer');
 const app = express();
 const port = process.env.PORT || 3001;
 
-
-// const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/tons?retryWrites=true&w=majority&appName=Cluster0";
-const URI = "mongodb+srv://tonsvalleyeducationtrustorg:tI9MbnL0xrVtketb@cluster0.ym6ob.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-// const URI = "mongodb+srv://tonsvalleyeducationtrustorg:tI9MbnL0xrVtketb@cluster0.ym6ob.mongodb.net/"
-
+const URI = "mongodb+srv://aryan:Aryan123@cluster0.ym6ob.mongodb.net/tonsvalley?retryWrites=true&w=majority&appName=Cluster0"
 app.use(cookieParser());
 const allowedOrigins = ['https://www.tonsvalleyeducationtrust.org'];
 const corsOptions = {
