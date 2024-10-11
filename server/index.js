@@ -11,7 +11,9 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 
-const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/tons?retryWrites=true&w=majority&appName=Cluster0";
+// const URI = "mongodb+srv://aryanbhandari4077:qHiT2RmS7y343QC7@cluster0.wqexvgn.mongodb.net/tons?retryWrites=true&w=majority&appName=Cluster0";
+const URI = "mongodb+srv://tonsvalleyeducationtrustorg:tI9MbnL0xrVtketb@cluster0.ym6ob.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+// const URI = "mongodb+srv://tonsvalleyeducationtrustorg:tI9MbnL0xrVtketb@cluster0.ym6ob.mongodb.net/"
 
 app.use(cookieParser());
 const allowedOrigins = ['https://www.tonsvalleyeducationtrust.org'];
